@@ -33806,27 +33806,27 @@
         "Move": "MOVE_MEGA_DRAIN"
       },
       {
-        "Level": 30,
+        "Level": 27,
         "Move": "MOVE_ACROBATICS"
+      },
+      {
+        "Level": 32,
+        "Move": "MOVE_U_TURN"
       },
       {
         "Level": 35,
         "Move": "MOVE_COTTON_SPORE"
       },
       {
-        "Level": 39,
-        "Move": "MOVE_U_TURN"
-      },
-      {
-        "Level": 43,
+        "Level": 38,
         "Move": "MOVE_GIGA_DRAIN"
       },
       {
-        "Level": 49,
+        "Level": 43,
         "Move": "MOVE_BOUNCE"
       },
       {
-        "Level": 55,
+        "Level": 49,
         "Move": "MOVE_MEMENTO"
       }
     ],
