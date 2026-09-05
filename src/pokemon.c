@@ -1813,11 +1813,20 @@ u32 LONG_CALL GetLevelCap(void)
     return 0;
 #else
 #ifdef IMPLEMENT_LEVEL_CAP
-    u32 levelCap = GetScriptVar(LEVEL_CAP_VARIABLE);
-    if (levelCap > 100 || levelCap == 0) {
-        levelCap = 100;
+    // Trainer defeated flags start at 1360 and are indexed by trainer ID.
+    // Early-game progression: Elder Li (290) -> Falkner (20).
+    const u16 trainerFlagBase = 1360;
+    const u16 trainerIdFalkner = 20;
+    const u16 trainerIdElderLi = 290;
+
+    if (CheckScriptFlag(trainerFlagBase + trainerIdFalkner)) {
+        // No cap after Falkner until the next progression milestone is defined.
+        return 100;
     }
-    return levelCap;
+    if (CheckScriptFlag(trainerFlagBase + trainerIdElderLi)) {
+        return 13;
+    }
+    return 10;
 #else
     return 100;
 #endif // IMPLEMENT_LEVEL_CAP
