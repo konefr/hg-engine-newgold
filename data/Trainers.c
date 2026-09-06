@@ -16335,14 +16335,14 @@ const TrainerData sTrainerData[] = {
                 .ivs = 50,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
                 .level = 13,
-                .species = SPECIES_PIDGEY,
+                .species = SPECIES_HOOTHOOT,
                 .ballSeal = 0,
             },
             {
                 .ivs = 50,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_2,
                 .level = 13,
-                .species = SPECIES_PIDGEY,
+                .species = SPECIES_NATU,
                 .ballSeal = 0,
             },
             {
