@@ -387,7 +387,14 @@ u16 GetMonEvolutionInternal(struct Party *party, struct PartyPokemon *pokemon, u
                 *method_ret = 0;
                 break;
             }
-            if (evoTable[i].method == EVO_TRADE_ITEM && heldItem == evoTable[i].param && usedItem == ITEM_LINKING_CORD) {
+            // Linking Cord acts as an alternative to trading.
+            if (usedItem == ITEM_LINKING_CORD && evoTable[i].method == EVO_TRADE) {
+                target = evoTable[i].target & 0x7FF;
+                *method_ret = 0;
+                break;
+            }
+            // Trade evolutions that require a held item still require that item.
+            if (usedItem == ITEM_LINKING_CORD && evoTable[i].method == EVO_TRADE_ITEM && heldItem == evoTable[i].param) {
                 target = evoTable[i].target & 0x7FF;
                 *method_ret = 0;
                 break;
