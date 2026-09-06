@@ -1,0 +1,115 @@
+name: Apply Slowpoke Well encounters
+
+on:
+  push:
+    branches:
+      - heartgold-modern
+    paths:
+      - '.github/workflows/apply-slowpoke-well-encounters.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    if: github.event.head_commit.message == 'Add one-shot Slowpoke Well encounter updater'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: heartgold-modern
+
+      - name: Update Slowpoke Well 1F encounter slots
+        shell: bash
+        run: |
+          grep -q '#define SPECIES_WHISMUR' include/constants/species.h
+          grep -q '#define SPECIES_TYMPOLE' include/constants/species.h
+          grep -q '#define SPECIES_NOIBAT' include/constants/species.h
+
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          path = Path('data/Encounters.c')
+          text = path.read_text()
+
+          marker = '    [ENCDATA_D26R0102_SLOWPOKE_WELL_1F] = {'
+          start = text.index(marker)
+          end = text.index('\n    [', start + len(marker))
+          block = text[start:end]
+
+          arrays = {
+              'speciesMorning': [
+                  'SPECIES_ZUBAT',
+                  'SPECIES_ZUBAT',
+                  'SPECIES_ZUBAT',
+                  'SPECIES_SLOWPOKE',
+                  'SPECIES_PARAS',
+                  'SPECIES_WOOPER',
+                  'SPECIES_SLOWPOKE',
+                  'SPECIES_ZUBAT',
+                  'SPECIES_PARAS',
+                  'SPECIES_SLOWPOKE',
+                  'SPECIES_WHISMUR',
+                  'SPECIES_SLOWPOKE',
+              ],
+              'speciesDay': [
+                  'SPECIES_ZUBAT',
+                  'SPECIES_ZUBAT',
+                  'SPECIES_ZUBAT',
+                  'SPECIES_SLOWPOKE',
+                  'SPECIES_WOOPER',
+                  'SPECIES_PARAS',
+                  'SPECIES_SLOWPOKE',
+                  'SPECIES_ZUBAT',
+                  'SPECIES_WOOPER',
+                  'SPECIES_SLOWPOKE',
+                  'SPECIES_TYMPOLE',
+                  'SPECIES_SLOWPOKE',
+              ],
+              'speciesNight': [
+                  'SPECIES_ZUBAT',
+                  'SPECIES_ZUBAT',
+                  'SPECIES_ZUBAT',
+                  'SPECIES_SLOWPOKE',
+                  'SPECIES_PARAS',
+                  'SPECIES_WOOPER',
+                  'SPECIES_SLOWPOKE',
+                  'SPECIES_ZUBAT',
+                  'SPECIES_PARAS',
+                  'SPECIES_SLOWPOKE',
+                  'SPECIES_SLOWPOKE',
+                  'SPECIES_NOIBAT',
+              ],
+          }
+
+          for name, entries in arrays.items():
+              pattern = rf'(\.{name} = \{{\n)(.*?)(\n\s*\}},)'
+              lines = '\n'.join(f'                {species},' for species in entries)
+              block, count = re.subn(
+                  pattern,
+                  lambda m: m.group(1) + lines + m.group(3),
+                  block,
+                  count=1,
+                  flags=re.S,
+              )
+              if count != 1:
+                  raise RuntimeError(f'Could not replace {name}: matches={count}')
+
+          new_text = text[:start] + block + text[end:]
+          if new_text == text:
+              raise RuntimeError('Slowpoke Well update produced no changes')
+          path.write_text(new_text)
+          PY
+
+          git diff --check
+          git diff -- data/Encounters.c
+
+      - name: Commit Slowpoke Well encounters
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/Encounters.c
+          git commit -m 'Diversify Slowpoke Well 1F wild encounters'
+          git push origin HEAD:heartgold-modern
