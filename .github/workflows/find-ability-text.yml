@@ -1,4 +1,4 @@
-name: Find ability text locations
+name: Add Evaporate ability
 
 on:
   push:
@@ -6,18 +6,83 @@ on:
       - '.github/workflows/find-ability-text.yml'
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
-  find:
+  patch:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Locate ability text data
+        with:
+          ref: heartgold-modern
+          fetch-depth: 0
+      - name: Add Evaporate and update Magcargo
+        shell: bash
         run: |
-          echo '=== Earth Eater ==='
-          grep -RIn --exclude-dir=.git -E 'Earth Eater|EARTH_EATER' . || true
-          echo '=== Spicy Spray ==='
-          grep -RIn --exclude-dir=.git -E 'Spicy Spray|SPICY_SPRAY' . || true
-          echo '=== Mega Sol ==='
-          grep -RIn --exclude-dir=.git -E 'Mega Sol|MEGA_SOL' . || true
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          # 1) Ability constant
+          p = Path('include/constants/ability.h')
+          s = p.read_text()
+          old = '#define ABILITY_SPICY_SPRAY      318\n\n#define NUM_ABILITIES ABILITY_SPICY_SPRAY + 1'
+          new = '#define ABILITY_SPICY_SPRAY      318\n#define ABILITY_EVAPORATE        319\n\n#define NUM_ABILITIES ABILITY_EVAPORATE + 1'
+          assert old in s, 'ability.h anchor not found'
+          p.write_text(s.replace(old, new, 1))
+
+          # 2) Ability flags: standard Mold Breaker-aware damage immunity
+          p = Path('data/AbilityFlags.c')
+          s = p.read_text()
+          old = '    [ABILITY_SPICY_SPRAY] = { .disabledByNeutralizingGas = TRUE },\n};'
+          new = '    [ABILITY_SPICY_SPRAY] = { .disabledByNeutralizingGas = TRUE },\n    [ABILITY_EVAPORATE] = { .ignoredByMoldBreaker = TRUE, .disabledByNeutralizingGas = TRUE },\n};'
+          assert old in s, 'AbilityFlags.c anchor not found'
+          p.write_text(s.replace(old, new, 1))
+
+          # 3) Battle effect: damaging Water moves deal zero damage; no heal or stat boost
+          p = Path('src/battle/ability.c')
+          s = p.read_text()
+          anchor = '    // TODO\n    // Handle Wonder Guard\n'
+          block = '''    // Handle Evaporate\n    if (MoldBreakerAbilityCheck(sp, attacker, defender, ABILITY_EVAPORATE) == TRUE) {\n        if ((movetype == TYPE_WATER)\n            && ((sp->server_status_flag & SERVER_STATUS_FLAG_x20) == 0)\n            && (sp->moveTbl[sp->current_move_index].power)) {\n            scriptnum = BATTLE_SUBSCRIPT_DOESNT_AFFECT_ABILITY;\n        }\n    }\n\n'''
+          assert anchor in s, 'ability.c anchor not found'
+          p.write_text(s.replace(anchor, block + anchor, 1))
+
+          # 4) Magcargo normal abilities only; keep Weak Armor as hidden ability
+          p = Path('data/Species.c')
+          s = p.read_text()
+          pattern = r'(\[SPECIES_MAGCARGO\]\s*=\s*\{.*?\.abilities\s*=\s*)\{\s*ABILITY_MAGMA_ARMOR\s*,\s*ABILITY_FLAME_BODY\s*\}'
+          s2, n = re.subn(pattern, r'\1{ ABILITY_EARTH_EATER, ABILITY_EVAPORATE }', s, count=1, flags=re.S)
+          assert n == 1, f'Magcargo ability replacement count was {n}'
+          p.write_text(s2)
+
+          # 5) Name, uppercase name, and summary description. Ability 319 => line 320.
+          additions = {
+              'data/text/720.txt': 'Evaporate',
+              'data/text/721.txt': 'EVAPORATE',
+              'data/text/722.txt': 'Water-type damaging moves\\nhave no effect.',
+          }
+          for filename, line in additions.items():
+              p = Path(filename)
+              rows = p.read_text().splitlines()
+              assert len(rows) == 319, f'{filename}: expected 319 entries, found {len(rows)}'
+              rows.append(line)
+              p.write_text('\n'.join(rows) + '\n')
+
+          # Sanity checks
+          assert 'ABILITY_EVAPORATE        319' in Path('include/constants/ability.h').read_text()
+          assert '.abilities = { ABILITY_EARTH_EATER, ABILITY_EVAPORATE },' in Path('data/Species.c').read_text()
+          assert Path('data/text/720.txt').read_text().splitlines()[319] == 'Evaporate'
+          PY
+
+          git diff --check
+          git diff -- include/constants/ability.h data/AbilityFlags.c src/battle/ability.c data/Species.c data/text/720.txt data/text/721.txt data/text/722.txt
+
+      - name: Commit changes and remove temporary workflow
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git rm .github/workflows/find-ability-text.yml
+          git add include/constants/ability.h data/AbilityFlags.c src/battle/ability.c data/Species.c data/text/720.txt data/text/721.txt data/text/722.txt
+          git commit -m 'Add Evaporate ability and update Magcargo'
+          git push origin HEAD:heartgold-modern
