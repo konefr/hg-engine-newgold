@@ -171,6 +171,15 @@ int MoveCheckDamageNegatingAbilities(struct BattleStruct *sp, int attacker, int 
         }
     }
 
+    // Handle Evaporate
+    if (MoldBreakerAbilityCheck(sp, attacker, defender, ABILITY_EVAPORATE) == TRUE) {
+        if ((movetype == TYPE_WATER)
+            && ((sp->server_status_flag & SERVER_STATUS_FLAG_x20) == 0)
+            && (sp->moveTbl[sp->current_move_index].power)) {
+            scriptnum = BATTLE_SUBSCRIPT_DOESNT_AFFECT_ABILITY;
+        }
+    }
+
     // TODO
     // Handle Wonder Guard
 
