@@ -4742,12 +4742,12 @@ const SpeciesDataEntry sSpeciesData[MAX_SPECIES_INCLUDING_FORMS + 1] = {
         },
         .speciesData = {
             .baseStats = {
-                .hp = 52,
+                .hp = 72,
                 .attack = 90,
                 .defense = 55,
                 .spAttack = 58,
                 .spDefense = 62,
-                .speed = 60,
+                .speed = 63,
             },
             .types = { TYPE_NORMAL, TYPE_FLYING },
             .catchRate = 45,
@@ -12836,10 +12836,10 @@ const SpeciesDataEntry sSpeciesData[MAX_SPECIES_INCLUDING_FORMS + 1] = {
         },
         .speciesData = {
             .baseStats = {
-                .hp = 45,
-                .attack = 55,
+                .hp = 75,
+                .attack = 75,
                 .defense = 45,
-                .spAttack = 65,
+                .spAttack = 85,
                 .spDefense = 45,
                 .speed = 75,
             },
@@ -12850,7 +12850,7 @@ const SpeciesDataEntry sSpeciesData[MAX_SPECIES_INCLUDING_FORMS + 1] = {
                 .hp = 0,
                 .attack = 0,
                 .defense = 0,
-                .spAttack = 0,
+                .spAttack = 1,
                 .spDefense = 0,
                 .speed = 1,
             },
