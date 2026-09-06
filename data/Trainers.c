@@ -16404,7 +16404,7 @@ const TrainerData sTrainerData[] = {
                 .ivs = 0,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
                 .level = 14,
-                .species = SPECIES_STANTLER,
+                .species = SPECIES_ONIX,
                 .ballSeal = 0,
             },
         },
