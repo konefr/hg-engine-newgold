@@ -1,0 +1,112 @@
+name: Apply Route 33 encounters
+
+on:
+  push:
+    branches:
+      - heartgold-modern
+    paths:
+      - '.github/workflows/apply-route33-encounters.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    if: github.event.head_commit.message == 'Add one-shot Route 33 encounter updater'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: heartgold-modern
+
+      - name: Update Route 33 encounter slots
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          path = Path('data/Encounters.c')
+          text = path.read_text()
+
+          route_marker = '    [ENCDATA_R33_ROUTE_33] = {'
+          next_marker = '    [ENCDATA_D26R0102_SLOWPOKE_WELL_1F] = {'
+          start = text.index(route_marker)
+          end = text.index(next_marker, start)
+          block = text[start:end]
+
+          arrays = {
+              'speciesMorning': [
+                  'SPECIES_HOPPIP',
+                  'SPECIES_RATTATA',
+                  'SPECIES_HOPPIP',
+                  'SPECIES_SPEAROW',
+                  'SPECIES_WOOPER',
+                  'SPECIES_MAREEP',
+                  'SPECIES_RATTATA',
+                  'SPECIES_LEDYBA',
+                  'SPECIES_HOPPIP',
+                  'SPECIES_ZUBAT',
+                  'SPECIES_PARAS',
+                  'SPECIES_LOTAD',
+              ],
+              'speciesDay': [
+                  'SPECIES_HOPPIP',
+                  'SPECIES_RATTATA',
+                  'SPECIES_SPEAROW',
+                  'SPECIES_HOPPIP',
+                  'SPECIES_MAREEP',
+                  'SPECIES_BELLSPROUT',
+                  'SPECIES_WOOPER',
+                  'SPECIES_RATTATA',
+                  'SPECIES_HOPPIP',
+                  'SPECIES_EKANS',
+                  'SPECIES_YANMA',
+                  'SPECIES_SEWADDLE',
+              ],
+              'speciesNight': [
+                  'SPECIES_ZUBAT',
+                  'SPECIES_RATTATA',
+                  'SPECIES_ZUBAT',
+                  'SPECIES_SPINARAK',
+                  'SPECIES_HOOTHOOT',
+                  'SPECIES_WOOPER',
+                  'SPECIES_RATTATA',
+                  'SPECIES_EKANS',
+                  'SPECIES_ZUBAT',
+                  'SPECIES_SPINARAK',
+                  'SPECIES_MURKROW',
+                  'SPECIES_POOCHYENA',
+              ],
+          }
+
+          for name, entries in arrays.items():
+              pattern = rf'(\.{name} = \{{\n)(.*?)(\n\s*\}},)'
+              lines = '\n'.join(f'                {species},' for species in entries)
+              block, count = re.subn(
+                  pattern,
+                  lambda m: m.group(1) + lines + m.group(3),
+                  block,
+                  count=1,
+                  flags=re.S,
+              )
+              if count != 1:
+                  raise RuntimeError(f'Could not replace {name}: matches={count}')
+
+          new_text = text[:start] + block + text[end:]
+          if new_text == text:
+              raise RuntimeError('Route 33 update produced no changes')
+          path.write_text(new_text)
+          PY
+
+          git diff --check
+          git diff -- data/Encounters.c
+
+      - name: Commit Route 33 encounters
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/Encounters.c
+          git commit -m 'Diversify Route 33 wild encounters'
+          git push origin HEAD:heartgold-modern
