@@ -1814,7 +1814,7 @@ const EncounterData __data[] =
         .rateSuperRod = 75,
         .landSlots = {
             .levels = {
-                5, 6, 5, 6, 7, 7, 6, 6, 8, 8, 8, 8
+                8, 9, 8, 9, 10, 10, 11, 11, 12, 13, 14, 15
             },
             .speciesMorning = {
                 SPECIES_ZUBAT,
