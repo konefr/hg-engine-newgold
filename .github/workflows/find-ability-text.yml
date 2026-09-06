@@ -1,0 +1,23 @@
+name: Find ability text locations
+
+on:
+  push:
+    paths:
+      - '.github/workflows/find-ability-text.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  find:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Locate ability text data
+        run: |
+          echo '=== Earth Eater ==='
+          grep -RIn --exclude-dir=.git -E 'Earth Eater|EARTH_EATER' . || true
+          echo '=== Spicy Spray ==='
+          grep -RIn --exclude-dir=.git -E 'Spicy Spray|SPICY_SPRAY' . || true
+          echo '=== Mega Sol ==='
+          grep -RIn --exclude-dir=.git -E 'Mega Sol|MEGA_SOL' . || true
