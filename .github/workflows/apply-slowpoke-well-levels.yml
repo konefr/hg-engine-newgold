@@ -1,0 +1,59 @@
+name: Apply Slowpoke Well levels
+
+on:
+  push:
+    branches:
+      - heartgold-modern
+    paths:
+      - '.github/workflows/apply-slowpoke-well-levels.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    if: github.event.head_commit.message == 'Add one-shot Slowpoke Well level updater'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: heartgold-modern
+
+      - name: Update Slowpoke Well 1F levels
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          path = Path('data/Encounters.c')
+          text = path.read_text()
+
+          marker = '    [ENCDATA_D26R0102_SLOWPOKE_WELL_1F] = {'
+          start = text.index(marker)
+          end = text.index('\n    [', start + len(marker))
+          block = text[start:end]
+
+          pattern = r'(\.levels = \{\n\s*)([^}]+?)(\n\s*\},)'
+          replacement = '8, 9, 8, 9, 10, 10, 11, 11, 12, 13, 14, 15'
+          block, count = re.subn(pattern, lambda m: m.group(1) + replacement + m.group(3), block, count=1, flags=re.S)
+          if count != 1:
+              raise RuntimeError(f'Could not replace Slowpoke Well levels: matches={count}')
+
+          new_text = text[:start] + block + text[end:]
+          if new_text == text:
+              raise RuntimeError('Slowpoke Well level update produced no changes')
+          path.write_text(new_text)
+          PY
+
+          git diff --check
+          git diff -- data/Encounters.c
+
+      - name: Commit Slowpoke Well levels
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/Encounters.c
+          git commit -m 'Raise Slowpoke Well 1F wild levels'
+          git push origin HEAD:heartgold-modern
