@@ -1079,7 +1079,7 @@ const TrainerData sTrainerData[] = {
                 .ivs = 0,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_2,
                 .level = 12,
-                .species = SPECIES_GEODUDE,
+                .species = SPECIES_BONSLY,
                 .ballSeal = 0,
             },
             {
@@ -13801,6 +13801,13 @@ const TrainerData sTrainerData[] = {
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
                 .level = 12,
                 .species = SPECIES_GULPIN,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 13,
+                .species = SPECIES_MAGMAR,
                 .ballSeal = 0,
             },
         },
