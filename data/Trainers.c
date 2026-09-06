@@ -2443,9 +2443,9 @@ const TrainerData sTrainerData[] = {
     [56] = {
         .name = "Gordon",
         .data = {
-            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerType = TRAINER_DATA_TYPE_ITEMS,
             .trainerClass = TRAINERCLASS_YOUNGSTER,
-            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .items = { ITEM_SUPER_POTION, ITEM_NONE, ITEM_NONE, ITEM_NONE },
             .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE,
             .battleType = SINGLE_BATTLE,
         },
@@ -2453,10 +2453,19 @@ const TrainerData sTrainerData[] = {
             {
                 .ivs = 0,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_2,
-                .level = 10,
+                .level = 14,
                 .species = SPECIES_WOOPER,
+                .item = ITEM_NONE,
+                .ballSeal = 0,
+                {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 14,
+                .species = SPECIES_KRABBY,
+                .item = ITEM_NONE,
                 .ballSeal = 0,
             },
+        },
         },
         .text = {
             {
@@ -2477,9 +2486,9 @@ const TrainerData sTrainerData[] = {
     [57] = {
         .name = "Ralph",
         .data = {
-            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerType = TRAINER_DATA_TYPE_ITEMS,
             .trainerClass = TRAINERCLASS_FISHERMAN,
-            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .items = { ITEM_SUPER_POTION, ITEM_NONE, ITEM_NONE, ITEM_NONE },
             .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE,
             .battleType = SINGLE_BATTLE,
         },
@@ -2487,10 +2496,19 @@ const TrainerData sTrainerData[] = {
             {
                 .ivs = 0,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 10,
+                .level = 14,
                 .species = SPECIES_GOLDEEN,
+                .item = ITEM_NONE,
+                .ballSeal = 0,
+                {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 14,
+                .species = SPECIES_MARILL,
+                .item = ITEM_NONE,
                 .ballSeal = 0,
             },
+        },
         },
         .text = {
             {
