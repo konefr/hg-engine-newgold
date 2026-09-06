@@ -2457,7 +2457,8 @@ const TrainerData sTrainerData[] = {
                 .species = SPECIES_WOOPER,
                 .item = ITEM_NONE,
                 .ballSeal = 0,
-                {
+            },
+            {
                 .ivs = 0,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
                 .level = 14,
@@ -2465,7 +2466,6 @@ const TrainerData sTrainerData[] = {
                 .item = ITEM_NONE,
                 .ballSeal = 0,
             },
-        },
         },
         .text = {
             {
@@ -2500,7 +2500,8 @@ const TrainerData sTrainerData[] = {
                 .species = SPECIES_GOLDEEN,
                 .item = ITEM_NONE,
                 .ballSeal = 0,
-                {
+            },
+            {
                 .ivs = 0,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
                 .level = 14,
@@ -2508,7 +2509,6 @@ const TrainerData sTrainerData[] = {
                 .item = ITEM_NONE,
                 .ballSeal = 0,
             },
-        },
         },
         .text = {
             {
