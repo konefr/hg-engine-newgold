@@ -1119,8 +1119,8 @@ const TrainerData sTrainerData[] = {
             {
                 .ivs = 0,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_2,
-                .level = 9,
-                .species = SPECIES_NIDORAN_M,
+                .level = 16,
+                .species = SPECIES_NIDORINO,
                 .ballSeal = 0,
             },
         },
@@ -1153,8 +1153,8 @@ const TrainerData sTrainerData[] = {
             {
                 .ivs = 0,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_2,
-                .level = 8,
-                .species = SPECIES_NIDORAN_F,
+                .level = 16,
+                .species = SPECIES_NIDORINA,
                 .ballSeal = 0,
             },
         },
