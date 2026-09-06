@@ -2127,9 +2127,9 @@ const TrainerData sTrainerData[] = {
     [49] = {
         .name = "Albert",
         .data = {
-            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerType = TRAINER_DATA_TYPE_ITEMS,
             .trainerClass = TRAINERCLASS_YOUNGSTER,
-            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .items = { ITEM_POTION, ITEM_SUPER_POTION, ITEM_NONE, ITEM_NONE },
             .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE,
             .battleType = SINGLE_BATTLE,
         },
@@ -2146,6 +2146,7 @@ const TrainerData sTrainerData[] = {
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
                 .level = 13,
                 .species = SPECIES_MAREEP,
+                .item = ITEM_ORAN_BERRY,
                 .ballSeal = 0,
             },
             {
@@ -2153,6 +2154,7 @@ const TrainerData sTrainerData[] = {
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
                 .level = 14,
                 .species = SPECIES_HOPPIP,
+                .item = ITEM_ORAN_BERRY,
                 .ballSeal = 0,
             },
         },
