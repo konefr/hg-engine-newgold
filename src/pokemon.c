@@ -1818,14 +1818,27 @@ u32 LONG_CALL GetLevelCap(void)
     const u16 trainerFlagBase = 1360;
     const u16 trainerIdFalkner = 20;
     const u16 trainerIdElderLi = 290;
+    const u16 trainerIdProton = 486;
+    const u16 trainerIdBugsy = 21; // verify this ID
 
-    if (CheckScriptFlag(trainerFlagBase + trainerIdFalkner)) {
-        // No cap after Falkner until the next progression milestone is defined.
+
+  if (CheckScriptFlag(trainerFlagBase + trainerIdBugsy)) {
+        // No cap after Bugsy until the next progression milestone is defined.
         return 100;
     }
+
+    if (CheckScriptFlag(trainerFlagBase + trainerIdProton)) {
+        return 22;
+    }
+
+    if (CheckScriptFlag(trainerFlagBase + trainerIdFalkner)) {
+        return 19;
+    }
+
     if (CheckScriptFlag(trainerFlagBase + trainerIdElderLi)) {
         return 13;
     }
+    
     return 10;
 #else
     return 100;
