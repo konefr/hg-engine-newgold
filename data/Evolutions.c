@@ -2158,7 +2158,7 @@ const EvolutionTable __data[MAX_SPECIES_INCLUDING_FORMS + 1] =
 
     [SPECIES_BAYLEEF] = {
         .entries = {
-            { EVO_LEVEL, 32, SPECIES_MEGANIUM },
+            { EVO_LEVEL, 35, SPECIES_MEGANIUM },
             { EVO_NONE, 0, SPECIES_NONE },
             { EVO_NONE, 0, SPECIES_NONE },
             { EVO_NONE, 0, SPECIES_NONE },
@@ -2200,7 +2200,7 @@ const EvolutionTable __data[MAX_SPECIES_INCLUDING_FORMS + 1] =
 
     [SPECIES_QUILAVA] = {
         .entries = {
-            { EVO_LEVEL, 36, SPECIES_TYPHLOSION },
+            { EVO_LEVEL, 35, SPECIES_TYPHLOSION },
             { EVO_NONE, 0, SPECIES_NONE },
             { EVO_NONE, 0, SPECIES_NONE },
             { EVO_NONE, 0, SPECIES_NONE },
@@ -2242,7 +2242,7 @@ const EvolutionTable __data[MAX_SPECIES_INCLUDING_FORMS + 1] =
 
     [SPECIES_CROCONAW] = {
         .entries = {
-            { EVO_LEVEL, 30, SPECIES_FERALIGATR },
+            { EVO_LEVEL, 35, SPECIES_FERALIGATR },
             { EVO_NONE, 0, SPECIES_NONE },
             { EVO_NONE, 0, SPECIES_NONE },
             { EVO_NONE, 0, SPECIES_NONE },
