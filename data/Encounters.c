@@ -2157,7 +2157,7 @@ const EncounterData __data[] =
             SPECIES_ABRA,
             SPECIES_HOUNDOUR,
             SPECIES_HOUNDOUR,
-            SPECIES_POOCHYENA,
+            SPECIES_MURKROW,
             SPECIES_POOCHYENA,
             SPECIES_MURKROW,
         },
@@ -6931,7 +6931,7 @@ const EncounterData __data[] =
                 SPECIES_TEDDIURSA,
                 SPECIES_TEDDIURSA,
                 SPECIES_PHANPY,
-                SPECIES_DUNSPARCE,
+                SPECIES_LARVITAR,
             },
             .speciesDay = {
                 SPECIES_GEODUDE,

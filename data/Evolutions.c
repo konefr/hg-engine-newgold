@@ -815,7 +815,7 @@ const EvolutionTable __data[MAX_SPECIES_INCLUDING_FORMS + 1] =
     [SPECIES_PRIMEAPE] = {
         .entries = {
             { EVO_FORM_ARGUMENT, 20, SPECIES_ANNIHILAPE },
-            { EVO_NONE, 0, SPECIES_NONE },
+            { EVO_HAS_MOVE, MOVE_RAGE_FIST, SPECIES_ANNIHILAPE },
             { EVO_NONE, 0, SPECIES_NONE },
             { EVO_NONE, 0, SPECIES_NONE },
             { EVO_NONE, 0, SPECIES_NONE },
@@ -2186,7 +2186,7 @@ const EvolutionTable __data[MAX_SPECIES_INCLUDING_FORMS + 1] =
 
     [SPECIES_CYNDAQUIL] = {
         .entries = {
-            { EVO_LEVEL, 14, SPECIES_QUILAVA },
+            { EVO_LEVEL, 16, SPECIES_QUILAVA },
             { EVO_NONE, 0, SPECIES_NONE },
             { EVO_NONE, 0, SPECIES_NONE },
             { EVO_NONE, 0, SPECIES_NONE },
@@ -2228,7 +2228,7 @@ const EvolutionTable __data[MAX_SPECIES_INCLUDING_FORMS + 1] =
 
     [SPECIES_TOTODILE] = {
         .entries = {
-            { EVO_LEVEL, 18, SPECIES_CROCONAW },
+            { EVO_LEVEL, 16, SPECIES_CROCONAW },
             { EVO_NONE, 0, SPECIES_NONE },
             { EVO_NONE, 0, SPECIES_NONE },
             { EVO_NONE, 0, SPECIES_NONE },
@@ -3293,7 +3293,7 @@ const EvolutionTable __data[MAX_SPECIES_INCLUDING_FORMS + 1] =
     [SPECIES_STANTLER] = {
         .entries = {
             { EVO_FORM_ARGUMENT, 20, SPECIES_WYRDEER },
-            { EVO_NONE, 0, SPECIES_NONE },
+            { EVO_HAS_MOVE, MOVE_PSYSHIELD_BASH, SPECIES_WYRDEER },
             { EVO_NONE, 0, SPECIES_NONE },
             { EVO_NONE, 0, SPECIES_NONE },
             { EVO_NONE, 0, SPECIES_NONE },

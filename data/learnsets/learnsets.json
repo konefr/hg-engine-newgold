@@ -30133,6 +30133,10 @@
         "Move": "MOVE_SHADOW_SNEAK"
       },
       {
+        "Level": 22,
+        "Move": "MOVE_STICKY_WEB"
+      },
+      {
         "Level": 23,
         "Move": "MOVE_FURY_SWIPES"
       },
@@ -30162,10 +30166,6 @@
       },
       {
         "Level": 54,
-        "Move": "MOVE_STICKY_WEB"
-      },
-      {
-        "Level": 59,
         "Move": "MOVE_TOXIC_THREAD"
       }
     ],
@@ -36093,12 +36093,16 @@
         "Move": "MOVE_AGILITY"
       },
       {
-        "Level": 28,
+        "Level": 25,
         "Move": "MOVE_DOUBLE_HIT"
       },
       {
-        "Level": 32,
+        "Level": 28,
         "Move": "MOVE_TWIN_BEAM"
+      },
+      {
+        "Level": 32,
+        "Move": "MOVE_SWIFT"
       },
       {
         "Level": 37,

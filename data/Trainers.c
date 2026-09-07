@@ -24,24 +24,31 @@ const TrainerData sTrainerData[] = {
         },
         .party = {
             {
-                .ivs = 30,
+                .ivs = 100,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 14,
-                .species = SPECIES_GASTLY,
+                .level = 22,
+                .species = SPECIES_MISDREAVUS,
                 .ballSeal = 0,
             },
             {
-                .ivs = 30,
+                .ivs = 100,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 16,
+                .level = 22,
                 .species = SPECIES_ZUBAT,
                 .ballSeal = 0,
             },
             {
-                .ivs = 30,
+                .ivs = 100,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 18,
+                .level = 22,
                 .species = SPECIES_BAYLEEF,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 10,
+                .species = SPECIES_LARVITAR,
                 .ballSeal = 0,
             },
         },
@@ -222,14 +229,28 @@ const TrainerData sTrainerData[] = {
             .battleType = SINGLE_BATTLE,
         },
         .party = {
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 17,
-                .species = SPECIES_GROWLITHE,
-                .ballSeal = 0,
-            },
-        },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 21,
+        .species = SPECIES_DROWZEE,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 21,
+        .species = SPECIES_MISDREAVUS,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 22,
+        .species = SPECIES_GROWLITHE,
+        .ballSeal = 0,
+    },
+},
         .text = {
             {
                 .type = TRMSG_INTRO,
@@ -255,36 +276,36 @@ const TrainerData sTrainerData[] = {
             .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE,
             .battleType = SINGLE_BATTLE,
         },
-        .party = {
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 2,
-                .species = SPECIES_VOLTORB,
-                .ballSeal = 0,
-            },
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_2,
-                .level = 6,
-                .species = SPECIES_VOLTORB,
-                .ballSeal = 0,
-            },
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 10,
-                .species = SPECIES_VOLTORB,
-                .ballSeal = 0,
-            },
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_2,
-                .level = 14,
-                .species = SPECIES_VOLTORB,
-                .ballSeal = 0,
-            },
-        },
+       .party = {
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 23,
+        .species = SPECIES_VOLTORB,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 24,
+        .species = SPECIES_VOLTORB,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 25,
+        .species = SPECIES_VOLTORB,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 26,
+        .species = SPECIES_VOLTORB,
+        .ballSeal = 0,
+    },
+},
         .text = {
             {
                 .type = TRMSG_INTRO,
@@ -2808,36 +2829,36 @@ const TrainerData sTrainerData[] = {
             .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE,
             .battleType = SINGLE_BATTLE,
         },
-        .party = {
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_2,
-                .level = 7,
-                .species = SPECIES_RATTATA,
-                .ballSeal = 0,
-            },
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 10,
-                .species = SPECIES_SANDSHREW,
-                .ballSeal = 0,
-            },
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 8,
-                .species = SPECIES_SPEAROW,
-                .ballSeal = 0,
-            },
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 8,
-                .species = SPECIES_SPEAROW,
-                .ballSeal = 0,
-            },
-        },
+       .party = {
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 18,
+        .species = SPECIES_RATTATA,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 18,
+        .species = SPECIES_SPEAROW,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 19,
+        .species = SPECIES_POOCHYENA,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 20,
+        .species = SPECIES_SANDSHREW,
+        .ballSeal = 0,
+    },
+},
         .text = {
             {
                 .type = TRMSG_INTRO,
@@ -2883,24 +2904,37 @@ const TrainerData sTrainerData[] = {
             .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE,
             .battleType = SINGLE_BATTLE,
         },
-        .party = {
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 10,
-                .species = SPECIES_MANKEY,
-                .moves = { MOVE_FOCUS_ENERGY, MOVE_SCRATCH, MOVE_LOW_KICK, MOVE_LEER },
-                .ballSeal = 0,
-            },
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 12,
-                .species = SPECIES_DIGLETT,
-                .moves = { MOVE_ASTONISH, MOVE_GROWL, MOVE_SCRATCH, MOVE_SAND_ATTACK },
-                .ballSeal = 0,
-            },
-        },
+       .party = {
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 19,
+        .species = SPECIES_MANKEY,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 19,
+        .species = SPECIES_SANDSHREW,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 21,
+        .species = SPECIES_DIGLETT,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 22,
+        .species = SPECIES_ARBOK,
+        .ballSeal = 0,
+    },
+
+},
         .text = {
             {
                 .type = TRMSG_INTRO,
@@ -2930,29 +2964,36 @@ const TrainerData sTrainerData[] = {
             .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE,
             .battleType = SINGLE_BATTLE,
         },
-        .party = {
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 9,
-                .species = SPECIES_HOPPIP,
-                .ballSeal = 0,
-            },
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 9,
-                .species = SPECIES_HOPPIP,
-                .ballSeal = 0,
-            },
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 12,
-                .species = SPECIES_BULBASAUR,
-                .ballSeal = 0,
-            },
-        },
+       .party = {
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 18,
+        .species = SPECIES_HOPPIP,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 19,
+        .species = SPECIES_SHROOMISH,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 19,
+        .species = SPECIES_APPLIN,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 21,
+        .species = SPECIES_BULBASAUR,
+        .ballSeal = 0,
+    },
+},
         .text = {
             {
                 .type = TRMSG_INTRO,
@@ -2982,15 +3023,29 @@ const TrainerData sTrainerData[] = {
             .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS,
             .battleType = SINGLE_BATTLE,
         },
-        .party = {
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 14,
-                .species = SPECIES_PSYDUCK,
-                .ballSeal = 0,
-            },
-        },
+       .party = {
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 20,
+        .species = SPECIES_QUAGSIRE,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 19,
+        .species = SPECIES_KRABBY,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 21,
+        .species = SPECIES_PSYDUCK,
+        .ballSeal = 0,
+    },
+},
         .text = {
             {
                 .type = TRMSG_INTRO,
@@ -3269,22 +3324,36 @@ const TrainerData sTrainerData[] = {
             .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE,
             .battleType = SINGLE_BATTLE,
         },
-        .party = {
-            {
-                .ivs = 50,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 12,
-                .species = SPECIES_PIDGEY,
-                .ballSeal = 0,
-            },
-            {
-                .ivs = 50,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 14,
-                .species = SPECIES_PIDGEOTTO,
-                .ballSeal = 0,
-            },
-        },
+       .party = {
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 23,
+        .species = SPECIES_PIDGEY,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 24,
+        .species = SPECIES_NOCTOWL,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 24,
+        .species = SPECIES_FLETCHINDER,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 26,
+        .species = SPECIES_PIDGEOTTO,
+        .ballSeal = 0,
+    },
+},
         .text = {
             {
                 .type = TRMSG_INTRO,
@@ -3372,29 +3441,36 @@ const TrainerData sTrainerData[] = {
             .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS,
             .battleType = SINGLE_BATTLE,
         },
-        .party = {
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 10,
-                .species = SPECIES_DIGLETT,
-                .ballSeal = 0,
-            },
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 10,
-                .species = SPECIES_ZUBAT,
-                .ballSeal = 0,
-            },
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 14,
-                .species = SPECIES_DIGLETT,
-                .ballSeal = 0,
-            },
-        },
+       .party = {
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 22,
+        .species = SPECIES_DIGLETT,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 23,
+        .species = SPECIES_GOLBAT,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 24,
+        .species = SPECIES_SANDSLASH,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 26,
+        .species = SPECIES_DUGTRIO,
+        .ballSeal = 0,
+    },
+},
         .text = {
             {
                 .type = TRMSG_INTRO,
@@ -3420,22 +3496,29 @@ const TrainerData sTrainerData[] = {
             .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS,
             .battleType = SINGLE_BATTLE,
         },
-        .party = {
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 13,
-                .species = SPECIES_SANDSHREW,
-                .ballSeal = 0,
-            },
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 15,
-                .species = SPECIES_MARILL,
-                .ballSeal = 0,
-            },
-        },
+       .party = {
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 23,
+        .species = SPECIES_SANDSLASH,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 23,
+        .species = SPECIES_DIGGERSBY,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 25,
+        .species = SPECIES_AZUMARILL,
+        .ballSeal = 0,
+    },
+},
         .text = {
             {
                 .type = TRMSG_INTRO,
@@ -3461,16 +3544,29 @@ const TrainerData sTrainerData[] = {
             .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE,
             .battleType = SINGLE_BATTLE,
         },
-        .party = {
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 16,
-                .species = SPECIES_PIKACHU,
-                .moves = { MOVE_THUNDER_SHOCK, MOVE_GROWL, MOVE_QUICK_ATTACK, MOVE_DOUBLE_TEAM },
-                .ballSeal = 0,
-            },
-        },
+       .party = {
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 24,
+        .species = SPECIES_PIKACHU,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 24,
+        .species = SPECIES_DEDENNE,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 26,
+        .species = SPECIES_FLAAFFY,
+        .ballSeal = 0,
+    },
+},
         .text = {
             {
                 .type = TRMSG_INTRO,
@@ -3497,14 +3593,28 @@ const TrainerData sTrainerData[] = {
             .battleType = SINGLE_BATTLE,
         },
         .party = {
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 15,
-                .species = SPECIES_VULPIX,
-                .ballSeal = 0,
-            },
-        },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 23,
+        .species = SPECIES_VULPIX,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 23,
+        .species = SPECIES_SKIPLOOM,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 25,
+        .species = SPECIES_GROWLITHE,
+        .ballSeal = 0,
+    },
+},
         .text = {
             {
                 .type = TRMSG_INTRO,
@@ -3531,14 +3641,35 @@ const TrainerData sTrainerData[] = {
             .battleType = SINGLE_BATTLE,
         },
         .party = {
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 15,
-                .species = SPECIES_VENONAT,
-                .ballSeal = 0,
-            },
-        },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 23,
+        .species = SPECIES_VENONAT,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 24,
+        .species = SPECIES_ARIADOS,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 24,
+        .species = SPECIES_SWADLOON,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 26,
+        .species = SPECIES_VENONAT,
+        .ballSeal = 0,
+    },
+},
         .text = {
             {
                 .type = TRMSG_INTRO,
@@ -3609,22 +3740,29 @@ const TrainerData sTrainerData[] = {
             .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EXPERT_ATTACKS,
             .battleType = SINGLE_BATTLE,
         },
-        .party = {
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 14,
-                .species = SPECIES_GROWLITHE,
-                .ballSeal = 0,
-            },
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 14,
-                .species = SPECIES_GROWLITHE,
-                .ballSeal = 0,
-            },
-        },
+       .party = {
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 24,
+        .species = SPECIES_GROWLITHE,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 25,
+        .species = SPECIES_HOUNDOOM,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 26,
+        .species = SPECIES_GROWLITHE,
+        .ballSeal = 0,
+    },
+},
         .text = {
             {
                 .type = TRMSG_INTRO,
@@ -9631,22 +9769,37 @@ const TrainerData sTrainerData[] = {
             .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EXPERT_ATTACKS,
             .battleType = SINGLE_BATTLE,
         },
-        .party = {
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 11,
-                .species = SPECIES_GRIMER,
-                .ballSeal = 0,
-            },
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 11,
-                .species = SPECIES_GRIMER,
-                .ballSeal = 0,
-            },
-        },
+        // [233] Super Nerd Eric
+.party = {
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 22,
+        .species = SPECIES_GRIMER,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 22,
+        .species = SPECIES_TRUBBISH,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 23,
+        .species = SPECIES_KOFFING,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 24,
+        .species = SPECIES_GRIMER,
+        .ballSeal = 0,
+    },
+},
         .text = {
             {
                 .type = TRMSG_INTRO,
@@ -11417,37 +11570,53 @@ const TrainerData sTrainerData[] = {
     },
 
     [266] = {
-        .name = "Silver",
-        .data = {
-            .trainerType = TRAINER_DATA_TYPE_NOTHING,
-            .trainerClass = TRAINERCLASS_RIVAL,
-            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
-            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_PRIORITIZE_DAMAGE,
-            .battleType = SINGLE_BATTLE,
+    .name = "Silver",
+    .data = {
+        .trainerType = TRAINER_DATA_TYPE_NOTHING,
+        .trainerClass = TRAINERCLASS_RIVAL,
+        .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+        .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE
+                 | F_EVALUATE_ATTACKS
+                 | F_PRIORITIZE_DAMAGE,
+        .battleType = SINGLE_BATTLE,
+    },
+    .party = {
+        {
+            .ivs = 100,
+            .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+            .level = 22,
+            .species = SPECIES_MISDREAVUS,
+            .ballSeal = 0,
         },
-        .party = {
-            {
-                .ivs = 30,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 14,
-                .species = SPECIES_GASTLY,
-                .ballSeal = 0,
-            },
-            {
-                .ivs = 30,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 16,
-                .species = SPECIES_ZUBAT,
-                .ballSeal = 0,
-            },
-            {
-                .ivs = 30,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 18,
-                .species = SPECIES_QUILAVA,
-                .ballSeal = 0,
-            },
+        {
+            .ivs = 0,
+            .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+            .level = 10,
+            .species = SPECIES_LARVITAR,
+            .ballSeal = 0,
         },
+        {
+            .ivs = 100,
+            .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+            .level = 22,
+            .species = SPECIES_TEDDIURSA,
+            .ballSeal = 0,
+        },
+        {
+            .ivs = 100,
+            .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+            .level = 22,
+            .species = SPECIES_ZUBAT,
+            .ballSeal = 0,
+        },
+        {
+            .ivs = 100,
+            .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+            .level = 22,
+            .species = SPECIES_QUILAVA,
+            .ballSeal = 0,
+        },
+    },
         .text = {
             {
                 .type = TRMSG_LAST_POKE,
@@ -11610,38 +11779,54 @@ const TrainerData sTrainerData[] = {
         },
     },
 
-    [269] = {
-        .name = "Silver",
-        .data = {
-            .trainerType = TRAINER_DATA_TYPE_NOTHING,
-            .trainerClass = TRAINERCLASS_RIVAL,
-            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
-            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_PRIORITIZE_DAMAGE,
-            .battleType = SINGLE_BATTLE,
+   [269] = {
+    .name = "Silver",
+    .data = {
+        .trainerType = TRAINER_DATA_TYPE_NOTHING,
+        .trainerClass = TRAINERCLASS_RIVAL,
+        .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+        .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE
+                 | F_EVALUATE_ATTACKS
+                 | F_PRIORITIZE_DAMAGE,
+        .battleType = SINGLE_BATTLE,
+    },
+    .party = {
+        {
+            .ivs = 100,
+            .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+            .level = 22,
+            .species = SPECIES_MISDREAVUS,
+            .ballSeal = 0,
         },
-        .party = {
-            {
-                .ivs = 30,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 14,
-                .species = SPECIES_GASTLY,
-                .ballSeal = 0,
-            },
-            {
-                .ivs = 30,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 16,
-                .species = SPECIES_ZUBAT,
-                .ballSeal = 0,
-            },
-            {
-                .ivs = 30,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 18,
-                .species = SPECIES_CROCONAW,
-                .ballSeal = 0,
-            },
+        {
+            .ivs = 100,
+            .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+            .level = 22,
+            .species = SPECIES_ZUBAT,
+            .ballSeal = 0,
         },
+        {
+            .ivs = 0,
+            .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+            .level = 10,
+            .species = SPECIES_LARVITAR,
+            .ballSeal = 0,
+        },
+        {
+            .ivs = 100,
+            .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+            .level = 22,
+            .species = SPECIES_TEDDIURSA,
+            .ballSeal = 0,
+        },
+        {
+            .ivs = 100,
+            .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+            .level = 22,
+            .species = SPECIES_CROCONAW,
+            .ballSeal = 0,
+        },
+    },
         .text = {
             {
                 .type = TRMSG_LAST_POKE,
@@ -16671,22 +16856,36 @@ const TrainerData sTrainerData[] = {
             .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE,
             .battleType = SINGLE_BATTLE,
         },
-        .party = {
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 11,
-                .species = SPECIES_MAGMAR,
-                .ballSeal = 0,
-            },
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 16,
-                .species = SPECIES_MAGMAR,
-                .ballSeal = 0,
-            },
-        },
+       .party = {
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 23,
+        .species = SPECIES_MAGBY,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 24,
+        .species = SPECIES_SLUGMA,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 24,
+        .species = SPECIES_LITLEO,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 26,
+        .species = SPECIES_MAGMAR,
+        .ballSeal = 0,
+    },
+},
         .text = {
             {
                 .type = TRMSG_INTRO,
@@ -16807,16 +17006,37 @@ const TrainerData sTrainerData[] = {
             .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_PRIORITIZE_DAMAGE,
             .battleType = SINGLE_BATTLE,
         },
-        .party = {
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 12,
-                .species = SPECIES_LICKITUNG,
-                .moves = { MOVE_LICK, MOVE_SUPERSONIC, MOVE_CUT, MOVE_NONE },
-                .ballSeal = 0,
-            },
-        },
+        // [391] PokéManiac Issac
+.party = {
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 21,
+        .species = SPECIES_WHISMUR,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 22,
+        .species = SPECIES_GLAMEOW,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 23,
+        .species = SPECIES_FURRET,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 24,
+        .species = SPECIES_LICKITUNG,
+        .ballSeal = 0,
+    },
+},
         .text = {
             {
                 .type = TRMSG_INTRO,
@@ -16842,22 +17062,37 @@ const TrainerData sTrainerData[] = {
             .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_PRIORITIZE_DAMAGE,
             .battleType = SINGLE_BATTLE,
         },
-        .party = {
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_2,
-                .level = 11,
-                .species = SPECIES_SLOWPOKE,
-                .ballSeal = 0,
-            },
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_2,
-                .level = 11,
-                .species = SPECIES_SLOWPOKE,
-                .ballSeal = 0,
-            },
-        },
+       // [392] PokéManiac Donald
+.party = {
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_2,
+        .level = 22,
+        .species = SPECIES_SLOWPOKE,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 22,
+        .species = SPECIES_PSYDUCK,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 23,
+        .species = SPECIES_ELGYEM,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_2,
+        .level = 24,
+        .species = SPECIES_SLOWPOKE,
+        .ballSeal = 0,
+    },
+},
         .text = {
             {
                 .type = TRMSG_INTRO,
@@ -16883,36 +17118,37 @@ const TrainerData sTrainerData[] = {
             .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EXPERT_ATTACKS,
             .battleType = SINGLE_BATTLE,
         },
-        .party = {
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 7,
-                .species = SPECIES_MAGNEMITE,
-                .ballSeal = 0,
-            },
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 11,
-                .species = SPECIES_VOLTORB,
-                .ballSeal = 0,
-            },
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_2,
-                .level = 7,
-                .species = SPECIES_MAGNEMITE,
-                .ballSeal = 0,
-            },
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 9,
-                .species = SPECIES_MAGNEMITE,
-                .ballSeal = 0,
-            },
-        },
+       // [393] Super Nerd Teru
+.party = {
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 21,
+        .species = SPECIES_MAGNEMITE,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 150,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 22,
+        .species = SPECIES_KLINK,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_2,
+        .level = 22,
+        .species = SPECIES_MAGNEMITE,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 24,
+        .species = SPECIES_VOLTORB,
+        .ballSeal = 0,
+    },
+},
         .text = {
             {
                 .type = TRMSG_INTRO,
@@ -17582,21 +17818,28 @@ const TrainerData sTrainerData[] = {
             .battleType = SINGLE_BATTLE,
         },
         .party = {
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 13,
-                .species = SPECIES_SNUBBULL,
-                .ballSeal = 0,
-            },
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 13,
-                .species = SPECIES_MAREEP,
-                .ballSeal = 0,
-            },
-        },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 19,
+        .species = SPECIES_MAREEP,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 19,
+        .species = SPECIES_LILLIPUP,
+        .ballSeal = 0,
+    },
+    {
+        .ivs = 50,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 21,
+        .species = SPECIES_SNUBBULL,
+        .ballSeal = 0,
+    },
+},
         .text = {
             {
                 .type = TRMSG_INTRO,

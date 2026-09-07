@@ -9614,7 +9614,7 @@ const SpeciesDataEntry sSpeciesData[MAX_SPECIES_INCLUDING_FORMS + 1] = {
             .baseFriendship = 70,
             .expRate = GROWTH_FAST,
             .eggGroups = { EGG_GROUP_BUG, EGG_GROUP_BUG },
-            .abilities = { ABILITY_SWARM, ABILITY_COMPOUND_EYES },
+            .abilities = { ABILITY_SNIPER, ABILITY_COMPOUND_EYES },
             .safariFleeRate = 0,
             .bodyColor = BODY_COLOR_RED,
             .flipSprite = 0,
@@ -24471,7 +24471,7 @@ const SpeciesDataEntry sSpeciesData[MAX_SPECIES_INCLUDING_FORMS + 1] = {
                 .spDefense = 105,
                 .speed = 105,
             },
-            .types = { TYPE_GHOST, TYPE_GHOST },
+            .types = { TYPE_GHOST, TYPE_FAIRY },
             .catchRate = 45,
             .baseExpRewardPadding = 0,
             .evYields = {
