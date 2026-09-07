@@ -73172,11 +73172,11 @@
         "Move": "MOVE_SCREECH"
       },
       {
-        "Level": 29,
+        "Level": 27,
         "Move": "MOVE_AGILITY"
       },
       {
-        "Level": 32,
+        "Level": 30,
         "Move": "MOVE_DOUBLE_HIT"
       },
       {
@@ -158240,11 +158240,11 @@
         "Move": "MOVE_DOUBLE_HIT"
       },
       {
-        "Level": 32,
+        "Level": 30,
         "Move": "MOVE_TWIN_BEAM"
       },
       {
-        "Level": 37,
+        "Level": 35,
         "Move": "MOVE_CRUNCH"
       },
       {

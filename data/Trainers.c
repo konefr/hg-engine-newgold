@@ -1423,32 +1423,98 @@ const TrainerData sTrainerData[] = {
     [30] = {
         .name = "Whitney",
         .data = {
-            .trainerType = TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ITEMS,
+            .trainerType = TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY,
             .trainerClass = TRAINERCLASS_LEADER_WHITNEY,
             .items = { ITEM_SUPER_POTION, ITEM_SUPER_POTION, ITEM_NONE, ITEM_NONE },
-            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS,
+            .aiFlags = F_TRAINER_EXPERT_AI | F_PRIORITIZE_STATUS_MOVES | F_PRIORITIZE_HEALING,
             .battleType = SINGLE_BATTLE,
         },
         .party = {
-            {
-                .ivs = 100,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 17,
-                .species = SPECIES_CLEFAIRY,
-                .item = ITEM_NONE,
-                .moves = { MOVE_DOUBLE_SLAP, MOVE_MIMIC, MOVE_ENCORE, MOVE_METRONOME },
-                .ballSeal = 0,
-            },
-            {
-                .ivs = 100,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_2,
-                .level = 19,
-                .species = SPECIES_MILTANK,
-                .item = ITEM_LUM_BERRY,
-                .moves = { MOVE_ROLLOUT, MOVE_ATTRACT, MOVE_STOMP, MOVE_MILK_DRINK },
-                .ballSeal = 0,
-            },
+    // Furret - utility / pivot
+    {
+        .ivs = 150,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 28,
+        .species = SPECIES_FURRET,
+        .item = ITEM_SITRUS_BERRY,
+        .moves = {
+            MOVE_BODY_SLAM,
+            MOVE_KNOCK_OFF,
+            MOVE_U_TURN,
+            MOVE_BRICK_BREAK,
         },
+        .ability = ABILITY_FRISK,
+        .ballSeal = 0,
+    },
+
+    // Ambipom - fast physical attacker
+    {
+        .ivs = 180,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 28,
+        .species = SPECIES_AMBIPOM,
+        .item = ITEM_SILK_SCARF,
+        .moves = {
+            MOVE_FAKE_OUT,
+            MOVE_DOUBLE_HIT,
+            MOVE_AERIAL_ACE,
+            MOVE_U_TURN,
+        },
+        .ability = ABILITY_TECHNICIAN,
+        .ballSeal = 0,
+    },
+
+    // Wigglytuff - bulky special / disruption
+    {
+        .ivs = 160,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 29,
+        .species = SPECIES_WIGGLYTUFF,
+        .item = ITEM_CHOPLE_BERRY,
+        .moves = {
+            MOVE_HYPER_VOICE,
+            MOVE_DAZZLING_GLEAM,
+            MOVE_THUNDER_WAVE,
+            MOVE_FLAMETHROWER,
+        },
+        .ability = ABILITY_CUTE_CHARM,
+        .ballSeal = 0,
+    },
+
+    // Farigiraf - special breaker
+    {
+        .ivs = 180,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_HIDDEN,
+        .level = 29,
+        .species = SPECIES_FARIGIRAF,
+        .item = ITEM_TWISTED_SPOON,
+        .moves = {
+            MOVE_PSYCHIC,
+            MOVE_HYPER_VOICE,
+            MOVE_THUNDERBOLT,
+            MOVE_NASTY_PLOT,
+        },
+        .ability = ABILITY_SAP_SIPPER,
+        .ballSeal = 0,
+    },
+
+    // Miltank - ACE
+    {
+        .ivs = 200,
+        .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+        .level = 30,
+        .species = SPECIES_MILTANK,
+        .item = ITEM_LUM_BERRY,
+        .moves = {
+            MOVE_BODY_SLAM,
+            MOVE_MILK_DRINK,
+            MOVE_BULLDOZE,
+            MOVE_ZEN_HEADBUTT,
+        },
+        .ability = ABILITY_THICK_FAT,
+        .ballSeal = 0,
+    },
+},
         .text = {
             {
                 .type = TRMSG_LAST_POKE,

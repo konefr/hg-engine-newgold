@@ -1814,17 +1814,24 @@ u32 LONG_CALL GetLevelCap(void)
 #else
 #ifdef IMPLEMENT_LEVEL_CAP
     // Trainer defeated flags start at 1360 and are indexed by trainer ID.
-    // Early-game progression: Elder Li (290) -> Falkner (20).
+    // Progression:
+    // Elder Li (290) -> Falkner (20) -> Proton (486) -> Bugsy (21) -> Whitney (30).
+
     const u16 trainerFlagBase = 1360;
-    const u16 trainerIdFalkner = 20;
+
     const u16 trainerIdElderLi = 290;
+    const u16 trainerIdFalkner = 20;
     const u16 trainerIdProton = 486;
-    const u16 trainerIdBugsy = 21; // verify this ID
+    const u16 trainerIdBugsy = 21;
+    const u16 trainerIdWhitney = 30;
 
-
-  if (CheckScriptFlag(trainerFlagBase + trainerIdBugsy)) {
-        // No cap after Bugsy until the next progression milestone is defined.
+    if (CheckScriptFlag(trainerFlagBase + trainerIdWhitney)) {
+        // Temporary: no cap after Whitney until the next milestone is defined.
         return 100;
+    }
+
+    if (CheckScriptFlag(trainerFlagBase + trainerIdBugsy)) {
+        return 30;
     }
 
     if (CheckScriptFlag(trainerFlagBase + trainerIdProton)) {
@@ -1838,7 +1845,7 @@ u32 LONG_CALL GetLevelCap(void)
     if (CheckScriptFlag(trainerFlagBase + trainerIdElderLi)) {
         return 13;
     }
-    
+
     return 10;
 #else
     return 100;
