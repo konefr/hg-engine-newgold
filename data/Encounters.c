@@ -827,7 +827,7 @@ const EncounterData __data[] =
                 SPECIES_HOPPIP,
                 SPECIES_MARILL,
                 SPECIES_MARILL,
-                SPECIES_SUNKERN,
+                SPECIES_GULPIN,
                 SPECIES_ZUBAT,
             },
             .speciesDay = {
@@ -855,7 +855,7 @@ const EncounterData __data[] =
                 SPECIES_MAREEP,
                 SPECIES_WOOPER,
                 SPECIES_ZUBAT,
-                SPECIES_SUNKERN,
+                SPECIES_COMBEE,
                 SPECIES_MACHOP,
             },
         },

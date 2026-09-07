@@ -2536,7 +2536,7 @@ const EvolutionTable __data[MAX_SPECIES_INCLUDING_FORMS + 1] =
 
     [SPECIES_FLAAFFY] = {
         .entries = {
-            { EVO_LEVEL, 30, SPECIES_AMPHAROS },
+            { EVO_LEVEL, 35, SPECIES_AMPHAROS },
             { EVO_NONE, 0, SPECIES_NONE },
             { EVO_NONE, 0, SPECIES_NONE },
             { EVO_NONE, 0, SPECIES_NONE },
