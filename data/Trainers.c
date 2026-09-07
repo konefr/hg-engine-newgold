@@ -388,17 +388,31 @@ const TrainerData sTrainerData[] = {
         },
         .party = {
             {
-                .ivs = 10,
+                .ivs = 60,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_2,
-                .level = 10,
+                .level = 20,
                 .species = SPECIES_SPINARAK,
                 .ballSeal = 0,
             },
             {
-                .ivs = 10,
+                .ivs = 60,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_2,
-                .level = 10,
+                .level = 20,
                 .species = SPECIES_LEDYBA,
+                .ballSeal = 0,
+            },
+{
+                .ivs = 60,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_2,
+                .level = 20,
+                .species = SPECIES_KARRABLAST,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 60,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_2,
+                .level = 20,
+                .species = SPECIES_SHELMET,
                 .ballSeal = 0,
             },
         },
@@ -907,41 +921,103 @@ const TrainerData sTrainerData[] = {
     [21] = {
         .name = "Bugsy",
         .data = {
-            .trainerType = TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ITEMS,
+            .trainerType = TRAINER_DATA_TYPE_MOVES
+                         | TRAINER_DATA_TYPE_ITEMS
+                         | TRAINER_DATA_TYPE_ABILITY,
             .trainerClass = TRAINERCLASS_LEADER_BUGSY,
             .items = { ITEM_SUPER_POTION, ITEM_NONE, ITEM_NONE, ITEM_NONE },
-            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS,
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE
+                     | F_EVALUATE_ATTACKS
+                     | F_EXPERT_ATTACKS
+                     | F_PRIORITIZE_STATUS_MOVES,
             .battleType = SINGLE_BATTLE,
         },
-        .party = {
+         .party = {
+            // Ledian Lv.20
             {
-                .ivs = 80,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_2,
-                .level = 17,
-                .species = SPECIES_SCYTHER,
-                .item = ITEM_SITRUS_BERRY,
-                .moves = { MOVE_QUICK_ATTACK, MOVE_LEER, MOVE_U_TURN, MOVE_FOCUS_ENERGY },
-                .ballSeal = 0,
-            },
-            {
-                .ivs = 80,
+                .ivs = 100,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 15,
-                .species = SPECIES_KAKUNA,
-                .item = ITEM_NONE,
-                .moves = { MOVE_POISON_STING, MOVE_NONE, MOVE_NONE, MOVE_NONE },
+                .level = 20,
+                .species = SPECIES_LEDIAN,
+                .item = ITEM_LIGHT_CLAY,
+                .moves = {
+                    MOVE_REFLECT,
+                    MOVE_LIGHT_SCREEN,
+                    MOVE_DRAIN_PUNCH,
+                    MOVE_U_TURN,
+                },
+                .ability = ABILITY_IRON_FIST,
                 .ballSeal = 0,
             },
+
+            // Dwebble Lv.20
             {
-                .ivs = 80,
+                .ivs = 100,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 15,
-                .species = SPECIES_METAPOD,
-                .item = ITEM_NONE,
-                .moves = { MOVE_TACKLE, MOVE_NONE, MOVE_NONE, MOVE_NONE },
+                .level = 20,
+                .species = SPECIES_DWEBBLE,
+                .item = ITEM_ORAN_BERRY,
+                .moves = {
+                    MOVE_ROCK_TOMB,
+                    MOVE_BUG_BITE,
+                    MOVE_KNOCK_OFF,
+                    MOVE_STEALTH_ROCK,
+                },
+                .ability = ABILITY_STURDY,
                 .ballSeal = 0,
             },
-        },
+
+            // Ariados Lv.22
+            {
+                .ivs = 150,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 22,
+                .species = SPECIES_ARIADOS,
+                .item = ITEM_BLACK_SLUDGE,
+                .moves = {
+                    MOVE_STICKY_WEB,
+                    MOVE_POISON_JAB,
+                    MOVE_LEECH_LIFE,
+                    MOVE_SUCKER_PUNCH,
+                },
+                .ability = ABILITY_WATER_BUBBLE,
+                .ballSeal = 0,
+            },
+
+            // Scizor Lv.21
+            {
+                .ivs = 150,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 21,
+                .species = SPECIES_SCIZOR,
+                .item = ITEM_METAL_COAT,
+                .moves = {
+                    MOVE_BULLET_PUNCH,
+                    MOVE_BUG_BITE,
+                    MOVE_AERIAL_ACE,
+                    MOVE_QUICK_ATTACK,
+                },
+                .ability = ABILITY_TECHNICIAN,
+                .ballSeal = 0,
+            },
+
+            // Heracross Lv.22
+            {
+                .ivs = 150,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 22,
+                .species = SPECIES_HERACROSS,
+                .item = ITEM_LUM_BERRY,
+                .moves = {
+                    MOVE_BRICK_BREAK,
+                    MOVE_PIN_MISSILE,
+                    MOVE_ROCK_TOMB,
+                    MOVE_AERIAL_ACE,
+                },
+                .ability = ABILITY_MOXIE,
+                .ballSeal = 0,
+            },
+},
         .text = {
             {
                 .type = TRMSG_LAST_POKE,
@@ -2939,24 +3015,38 @@ const TrainerData sTrainerData[] = {
         },
         .party = {
             {
-                .ivs = 10,
+                .ivs = 200,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 7,
-                .species = SPECIES_WEEDLE,
+                .level = 17,
+                .species = SPECIES_VENONAT,
                 .ballSeal = 0,
             },
             {
                 .ivs = 10,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 9,
-                .species = SPECIES_KAKUNA,
+                .level = 18,
+                .species = SPECIES_PINECO,
                 .ballSeal = 0,
             },
             {
-                .ivs = 10,
+                .ivs = 50,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 12,
+                .level = 20,
                 .species = SPECIES_BEEDRILL,
+                .ballSeal = 0,
+            },
+{
+                .ivs = 50,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 17,
+                .species = SPECIES_BUTTERFREE,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 10,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 15,
+                .species = SPECIES_COMBEE,
                 .ballSeal = 0,
             },
         },
@@ -2989,15 +3079,22 @@ const TrainerData sTrainerData[] = {
             {
                 .ivs = 10,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 12,
+                .level = 22,
                 .species = SPECIES_CATERPIE,
                 .ballSeal = 0,
             },
             {
                 .ivs = 10,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 12,
+                .level = 22,
                 .species = SPECIES_WEEDLE,
+                .ballSeal = 0,
+            },
+ {
+                .ivs = 10,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 22,
+                .species = SPECIES_JOLTYK,
                 .ballSeal = 0,
             },
         },
@@ -3028,10 +3125,24 @@ const TrainerData sTrainerData[] = {
         },
         .party = {
             {
-                .ivs = 10,
+                .ivs = 100,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 13,
-                .species = SPECIES_PARAS,
+                .level = 20,
+                .species = SPECIES_PINSIR,
+                .ballSeal = 0,
+            },
+ {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 20,
+                .species = SPECIES_YANMA,
+                .ballSeal = 0,
+            },
+ {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 20,
+                .species = SPECIES_SHUCKLE,
                 .ballSeal = 0,
             },
         },
