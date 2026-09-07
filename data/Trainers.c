@@ -3243,7 +3243,7 @@ const TrainerData sTrainerData[] = {
                 .ivs = 10,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
                 .level = 22,
-                .species = SPECIES_JOLTYK,
+                .species = SPECIES_JOLTIK,
                 .ballSeal = 0,
             },
         },
