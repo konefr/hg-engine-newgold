@@ -1813,40 +1813,40 @@ u32 LONG_CALL GetLevelCap(void)
     return 0;
 #else
 #ifdef IMPLEMENT_LEVEL_CAP
-    // Trainer defeated flags start at 1360 and are indexed by trainer ID.
+
+    struct PlayerProfile *profile = Sav2_PlayerData_GetProfileAddr(SaveBlock2_get());
+
     // Progression:
-    // Elder Li (290) -> Falkner (20) -> Proton (486) -> Bugsy (21) -> Whitney (30).
+    // Start -> Elder Li -> Falkner -> Proton -> Bugsy -> Whitney
 
-    const u16 trainerFlagBase = 1360;
-
-    const u16 trainerIdElderLi = 290;
-    const u16 trainerIdFalkner = 20;
-    const u16 trainerIdProton = 486;
-    const u16 trainerIdBugsy = 21;
-    const u16 trainerIdWhitney = 30;
-
-    if (CheckScriptFlag(trainerFlagBase + trainerIdWhitney)) {
-        // Temporary: no cap after Whitney until the next milestone is defined.
+    // Whitney defeated: temporary removal of level cap
+    if (PlayerProfile_TestBadgeFlag(profile, 2)) { // Plain Badge
         return 100;
     }
 
-    if (CheckScriptFlag(trainerFlagBase + trainerIdBugsy)) {
+    // Bugsy defeated: Whitney cap
+    if (PlayerProfile_TestBadgeFlag(profile, 1)) { // Hive Badge
         return 30;
     }
 
-    if (CheckScriptFlag(trainerFlagBase + trainerIdProton)) {
+    // Proton defeated in Slowpoke Well
+    if (CheckScriptFlag(123)) { // FLAG_BEAT_AZALEA_ROCKETS
         return 22;
     }
 
-    if (CheckScriptFlag(trainerFlagBase + trainerIdFalkner)) {
+    // Falkner defeated
+    if (PlayerProfile_TestBadgeFlag(profile, 0)) { // Zephyr Badge
         return 19;
     }
 
-    if (CheckScriptFlag(trainerFlagBase + trainerIdElderLi)) {
+    // Elder Li defeated in Sprout Tower
+    if (CheckScriptFlag(118)) { // FLAG_UNK_076
         return 13;
     }
 
+    // Initial cap
     return 10;
+
 #else
     return 100;
 #endif // IMPLEMENT_LEVEL_CAP
