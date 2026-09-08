@@ -45,3 +45,16 @@ Purchase complete.
 You don’t have enough money.
 You don’t have room in your Bag.
 Developer Shop\nRare Candy: $1 each.
+Developer Menu
+Rare Candy
+EV Training
+Exit
+EV Training\nThe first Pokémon in your party\nwill be modified.
+Physical
+Special
+Physical Tank
+Special Tank
+Balanced
+Reset EVs
+Back
+EVs updated!

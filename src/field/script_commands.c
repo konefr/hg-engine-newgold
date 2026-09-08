@@ -28,20 +28,108 @@ void SetupAndStartTotemBattle(TaskManager *taskManager, u16 species, u8 level, u
  *  @param ctx script context structure
  *  @return FALSE
  */
+
+#define DEV_EV_PRESET_RESET          2000
+#define DEV_EV_PRESET_PHYSICAL       2001
+#define DEV_EV_PRESET_SPECIAL        2002
+#define DEV_EV_PRESET_PHYS_TANK      2003
+#define DEV_EV_PRESET_SP_TANK        2004
+#define DEV_EV_PRESET_BALANCED       2005
+
 BOOL ScrCmd_GiveEgg(SCRIPTCONTEXT *ctx)
 {
     FieldSystem *fsys = ctx->fsys;
     void *profile = Sav2_PlayerData_GetProfileAddr(fsys->savedata);
 
+    // Read both script arguments first.
     u16 species = ScriptGetVar(ctx);
-
-    u32 form = (species & 0xF800) >> 11; // extract form from egg
-    species = species & 0x7FF;
-
     u16 offset = ScriptGetVar(ctx);
+
+    // Developer-only EV presets.
+    // Values 2000-2005 are deliberately invalid Pokémon species IDs.
+    if (species >= DEV_EV_PRESET_RESET &&
+        species <= DEV_EV_PRESET_BALANCED)
+    {
+        struct Party *party = SaveData_GetPlayerPartyPtr(fsys->savedata);
+
+        if (party->count == 0) {
+            return FALSE;
+        }
+
+        // Developer EV editor always affects the first Pokémon in the party.
+        struct PartyPokemon *pokemon = Party_GetMonByIndex(party, 0);
+
+        if (pokemon == NULL ||
+            GetMonData(pokemon, MON_DATA_IS_EGG, NULL))
+        {
+            return FALSE;
+        }
+
+        // Order:
+        // HP, Attack, Defense, Speed, Special Attack, Special Defense
+        u8 evs[6] = {0, 0, 0, 0, 0, 0};
+
+        switch (species) {
+        case DEV_EV_PRESET_PHYSICAL:
+            // 252 Atk / 252 Spe / 4 HP
+            evs[0] = 4;
+            evs[1] = 252;
+            evs[3] = 252;
+            break;
+
+        case DEV_EV_PRESET_SPECIAL:
+            // 252 SpA / 252 Spe / 4 HP
+            evs[0] = 4;
+            evs[3] = 252;
+            evs[4] = 252;
+            break;
+
+        case DEV_EV_PRESET_PHYS_TANK:
+            // 252 HP / 252 Def / 4 SpDef
+            evs[0] = 252;
+            evs[2] = 252;
+            evs[5] = 4;
+            break;
+
+        case DEV_EV_PRESET_SP_TANK:
+            // 252 HP / 252 SpDef / 4 Def
+            evs[0] = 252;
+            evs[2] = 4;
+            evs[5] = 252;
+            break;
+
+        case DEV_EV_PRESET_BALANCED:
+            // 504 total EVs
+            evs[0] = 84;
+            evs[1] = 84;
+            evs[2] = 84;
+            evs[3] = 84;
+            evs[4] = 84;
+            evs[5] = 84;
+            break;
+
+        case DEV_EV_PRESET_RESET:
+        default:
+            // Already all zero.
+            break;
+        }
+
+        for (u8 i = 0; i < 6; i++) {
+            SetMonData(pokemon, MON_DATA_HP_EV + i, &evs[i]);
+        }
+
+        RecalcPartyPokemonStats(pokemon);
+
+        return FALSE;
+    }
+
+    // Normal GiveEgg behaviour starts here.
+    u32 form = (species & 0xF800) >> 11;
+    species = species & 0x7FF;
 
     struct Party *party = SaveData_GetPlayerPartyPtr(fsys->savedata);
     u8 partyCount = party->count;
+
     if (partyCount < 6) {
         struct PartyPokemon *pokemon = AllocMonZeroed(11);
         ZeroMonData(pokemon);
@@ -49,12 +137,12 @@ BOOL ScrCmd_GiveEgg(SCRIPTCONTEXT *ctx)
 
         SetEggStats(pokemon, species, 1, profile, 3, val);
 
-        SetMonData(pokemon, MON_DATA_FORM, &form); // add form capability
+        SetMonData(pokemon, MON_DATA_FORM, &form);
 
         ClearMonMoves(pokemon);
         InitBoxMonMoveset(&pokemon->box);
 
-        if (CheckScriptFlag(HIDDEN_ABILITIES_FLAG) == 1) // add HA capability
+        if (CheckScriptFlag(HIDDEN_ABILITIES_FLAG) == 1)
         {
             SET_MON_HIDDEN_ABILITY_BIT(pokemon)
             ResetPartyPokemonAbility(pokemon);
@@ -67,6 +155,7 @@ BOOL ScrCmd_GiveEgg(SCRIPTCONTEXT *ctx)
 
     return FALSE;
 }
+
 
 /**
  *  @brief script command to give the togepi egg

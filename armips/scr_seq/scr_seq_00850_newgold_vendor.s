@@ -69,8 +69,89 @@ NewGold_CherrygroveVendor:
 
     npc_msg 36 // Access granted.
     wait_button
-    goto NewGold_VendorMenu
+    goto NewGold_MainMenu
 
+
+NewGold_MainMenu:
+    npc_msg 47 // Developer Menu
+    scrcmd_065 1, 1, 0, 1, VAR_SPECIAL_RESULT
+    scrcmd_066 48, 0 // Rare Candy
+    scrcmd_066 49, 1 // EV Training
+    scrcmd_066 50, 2 // Exit
+    scrcmd_067
+
+    compare_var_to_value VAR_SPECIAL_RESULT, 0
+    goto_if 1, NewGold_VendorMenu
+
+    compare_var_to_value VAR_SPECIAL_RESULT, 1
+    goto_if 1, NewGold_EVMenu
+
+    goto NewGold_VendorExit
+
+
+NewGold_EVMenu:
+    npc_msg 51 // First party Pokemon
+    scrcmd_065 1, 1, 0, 1, VAR_SPECIAL_RESULT
+    scrcmd_066 52, 0 // Physical
+    scrcmd_066 53, 1 // Special
+    scrcmd_066 54, 2 // Physical Tank
+    scrcmd_066 55, 3 // Special Tank
+    scrcmd_066 56, 4 // Balanced
+    scrcmd_066 57, 5 // Reset EVs
+    scrcmd_066 58, 6 // Back
+    scrcmd_067
+
+    compare_var_to_value VAR_SPECIAL_RESULT, 0
+    goto_if 1, NewGold_EVPhysical
+
+    compare_var_to_value VAR_SPECIAL_RESULT, 1
+    goto_if 1, NewGold_EVSpecial
+
+    compare_var_to_value VAR_SPECIAL_RESULT, 2
+    goto_if 1, NewGold_EVPhysTank
+
+    compare_var_to_value VAR_SPECIAL_RESULT, 3
+    goto_if 1, NewGold_EVSpTank
+
+    compare_var_to_value VAR_SPECIAL_RESULT, 4
+    goto_if 1, NewGold_EVBalanced
+
+    compare_var_to_value VAR_SPECIAL_RESULT, 5
+    goto_if 1, NewGold_EVReset
+
+    goto NewGold_MainMenu
+
+
+NewGold_EVPhysical:
+    give_egg 2001, 0
+    goto NewGold_EVSuccess
+
+NewGold_EVSpecial:
+    give_egg 2002, 0
+    goto NewGold_EVSuccess
+
+NewGold_EVPhysTank:
+    give_egg 2003, 0
+    goto NewGold_EVSuccess
+
+NewGold_EVSpTank:
+    give_egg 2004, 0
+    goto NewGold_EVSuccess
+
+NewGold_EVBalanced:
+    give_egg 2005, 0
+    goto NewGold_EVSuccess
+
+NewGold_EVReset:
+    give_egg 2000, 0
+    goto NewGold_EVSuccess
+
+NewGold_EVSuccess:
+    npc_msg 59
+    wait_button
+    goto NewGold_MainMenu
+
+    
 NewGold_VendorMenu:
     npc_msg 46 // Developer Shop / Rare Candy: $1 each.
     scrcmd_065 1, 1, 0, 1, VAR_SPECIAL_RESULT
