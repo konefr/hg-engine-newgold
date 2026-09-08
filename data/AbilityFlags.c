@@ -318,7 +318,6 @@ const AbilityFlags UNUSED sAbilityFlags[] = {
     [ABILITY_PIERCING_DRILL] = { .disabledByNeutralizingGas = TRUE },
     [ABILITY_DRAGONIZE] = { .disabledByNeutralizingGas = TRUE },
     [ABILITY_EELEVATE] = { .ignoredByMoldBreaker = TRUE, .disabledByNeutralizingGas = TRUE },
-    [ABILITY_TEMP2] = { .disabledByNeutralizingGas = TRUE },
     [ABILITY_MEGA_SOL] = { .disabledByNeutralizingGas = TRUE },
     [ABILITY_FIRE_MANE] = { .disabledByNeutralizingGas = TRUE },
     [ABILITY_TEMP4] = { .disabledByNeutralizingGas = TRUE },
