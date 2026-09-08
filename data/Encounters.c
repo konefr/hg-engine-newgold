@@ -819,7 +819,7 @@ const EncounterData __data[] =
             .speciesMorning = {
                 SPECIES_BELLSPROUT,
                 SPECIES_EKANS,
-                SPECIES_BELLSPROUT,
+                SPECIES_MARILL,
                 SPECIES_RATTATA,
                 SPECIES_MAREEP,
                 SPECIES_MAREEP,
@@ -832,8 +832,8 @@ const EncounterData __data[] =
             },
             .speciesDay = {
                 SPECIES_BELLSPROUT,
-                SPECIES_RATTATA,
-                SPECIES_BELLSPROUT,
+                SPECIES_MARILL,
+                SPECIES_MARILL,
                 SPECIES_NIDORAN_F,
                 SPECIES_MAREEP,
                 SPECIES_MAREEP,
@@ -849,7 +849,7 @@ const EncounterData __data[] =
                 SPECIES_POLIWAG,
                 SPECIES_WOOPER,
                 SPECIES_DODUO,
-                SPECIES_BELLSPROUT,
+                SPECIES_MARILL,
                 SPECIES_BELLSPROUT,
                 SPECIES_MAREEP,
                 SPECIES_MAREEP,
@@ -1423,7 +1423,7 @@ const EncounterData __data[] =
                 SPECIES_SANDSHREW,
                 SPECIES_ZUBAT,
                 SPECIES_ZUBAT,
-                SPECIES_RATTATA,
+                SPECIES_MARILL,
                 SPECIES_RATTATA,
                 SPECIES_ZUBAT,
                 SPECIES_ONIX,
@@ -1437,7 +1437,7 @@ const EncounterData __data[] =
                 SPECIES_SANDSHREW,
                 SPECIES_ZUBAT,
                 SPECIES_ZUBAT,
-                SPECIES_RATTATA,
+                SPECIES_MARILL,
                 SPECIES_RATTATA,
                 SPECIES_ZUBAT,
                 SPECIES_ONIX,
@@ -1452,7 +1452,7 @@ const EncounterData __data[] =
                 SPECIES_ZUBAT,
                 SPECIES_ZUBAT,
                 SPECIES_RATTATA,
-                SPECIES_RATTATA,
+                SPECIES_MARILL,
                 SPECIES_ZUBAT,
                 SPECIES_ONIX,
                 SPECIES_ZUBAT,
@@ -2216,52 +2216,52 @@ const EncounterData __data[] =
         .rateGoodRod = 50,
         .rateSuperRod = 75,
         .landSlots = {
-            .levels = {
-                12, 12, 12, 12, 14, 14, 10, 10, 14, 10, 14, 12
-            },
-            .speciesMorning = {
-                SPECIES_NIDORAN_M,
-                SPECIES_NIDORAN_F,
-                SPECIES_NIDORAN_M,
-                SPECIES_NIDORAN_F,
-                SPECIES_DROWZEE,
-                SPECIES_DROWZEE,
-                SPECIES_ABRA,
-                SPECIES_ABRA,
-                SPECIES_PIDGEY,
-                SPECIES_DITTO,
-                SPECIES_PIDGEY,
-                SPECIES_YANMA,
-            },
-            .speciesDay = {
-                SPECIES_NIDORAN_M,
-                SPECIES_NIDORAN_F,
-                SPECIES_NIDORAN_M,
-                SPECIES_NIDORAN_F,
-                SPECIES_DROWZEE,
-                SPECIES_DROWZEE,
-                SPECIES_ABRA,
-                SPECIES_ABRA,
-                SPECIES_PIDGEY,
-                SPECIES_DITTO,
-                SPECIES_PIDGEY,
-                SPECIES_YANMA,
-            },
-            .speciesNight = {
-                SPECIES_NIDORAN_M,
-                SPECIES_NIDORAN_F,
-                SPECIES_NIDORAN_M,
-                SPECIES_NIDORAN_F,
-                SPECIES_DROWZEE,
-                SPECIES_DROWZEE,
-                SPECIES_ABRA,
-                SPECIES_ABRA,
-                SPECIES_HOOTHOOT,
-                SPECIES_DITTO,
-                SPECIES_HOOTHOOT,
-                SPECIES_YANMA,
-            },
+          .levels = {
+            21, 21, 22, 22, 23, 23, 22, 23, 24, 24, 23, 24
         },
+        .speciesMorning = {
+        SPECIES_YANMA,        // 20%
+        SPECIES_NIDORAN_F,    // 20%
+        SPECIES_NIDORAN_M,    // 10%
+        SPECIES_DROWZEE,      // 10%
+        SPECIES_ABRA,         // 10%
+        SPECIES_PIDGEY,       // 10%
+        SPECIES_DITTO,        // 5%
+        SPECIES_NIDORAN_M,    // 5%
+        SPECIES_DROWZEE,      // 4%
+        SPECIES_PIDGEY,       // 4%
+        SPECIES_SKITTY,       // 1%
+        SPECIES_BUDEW,        // 1%
+    },
+    .speciesDay = {
+        SPECIES_YANMA,
+        SPECIES_NIDORAN_F,
+        SPECIES_NIDORAN_M,
+        SPECIES_DROWZEE,
+        SPECIES_ABRA,
+        SPECIES_PIDGEY,
+        SPECIES_DITTO,
+        SPECIES_NIDORAN_M,
+        SPECIES_DROWZEE,
+        SPECIES_PIDGEY,
+        SPECIES_LILLIPUP,     // 1%
+        SPECIES_BUNNELBY,     // 1%
+    },
+    .speciesNight = {
+        SPECIES_YANMA,
+        SPECIES_NIDORAN_F,
+        SPECIES_NIDORAN_M,
+        SPECIES_DROWZEE,
+        SPECIES_ABRA,
+        SPECIES_HOOTHOOT,
+        SPECIES_DITTO,
+        SPECIES_NIDORAN_M,
+        SPECIES_DROWZEE,
+        SPECIES_HOOTHOOT,
+        SPECIES_FOONGUS,      // 1%
+        SPECIES_ESPURR,       // 1%
+    },
+},
         .hoennSoundSpecies = {
             SPECIES_WHISMUR,
             SPECIES_LINOONE,
@@ -2316,52 +2316,52 @@ const EncounterData __data[] =
         .rateGoodRod = 0,
         .rateSuperRod = 0,
         .landSlots = {
-            .levels = {
-                10, 10, 10, 10, 12, 12, 12, 12, 10, 14, 10, 14
-            },
-            .speciesMorning = {
-                SPECIES_CATERPIE,
-                SPECIES_METAPOD,
-                SPECIES_CATERPIE,
-                SPECIES_METAPOD,
-                SPECIES_CATERPIE,
-                SPECIES_CATERPIE,
-                SPECIES_PIDGEY,
-                SPECIES_PIDGEY,
-                SPECIES_PIDGEY,
-                SPECIES_PIDGEY,
-                SPECIES_PIDGEY,
-                SPECIES_PIDGEY,
-            },
-            .speciesDay = {
-                SPECIES_CATERPIE,
-                SPECIES_METAPOD,
-                SPECIES_CATERPIE,
-                SPECIES_METAPOD,
-                SPECIES_SUNKERN,
-                SPECIES_SUNKERN,
-                SPECIES_PIDGEY,
-                SPECIES_PIDGEY,
-                SPECIES_SUNKERN,
-                SPECIES_PIDGEY,
-                SPECIES_SUNKERN,
-                SPECIES_PIDGEY,
-            },
-            .speciesNight = {
-                SPECIES_HOOTHOOT,
-                SPECIES_HOOTHOOT,
-                SPECIES_HOOTHOOT,
-                SPECIES_HOOTHOOT,
-                SPECIES_HOOTHOOT,
-                SPECIES_HOOTHOOT,
-                SPECIES_HOOTHOOT,
-                SPECIES_HOOTHOOT,
-                SPECIES_HOOTHOOT,
-                SPECIES_HOOTHOOT,
-                SPECIES_HOOTHOOT,
-                SPECIES_HOOTHOOT,
-            },
-        },
+    .levels = {
+        22, 22, 23, 23, 23, 23, 24, 24, 24, 24, 25, 25
+    },
+    .speciesMorning = {
+        SPECIES_HOPPIP,       // 20%
+        SPECIES_SENTRET,      // 20%
+        SPECIES_NIDORAN_F,    // 10%
+        SPECIES_NIDORAN_M,    // 10%
+        SPECIES_SUNKERN,      // 10%
+        SPECIES_PIDGEY,       // 10%
+        SPECIES_BUDEW,        // 5%
+        SPECIES_SKITTY,       // 5%
+        SPECIES_LOTAD,        // 4%
+        SPECIES_COMBEE,       // 4%
+        SPECIES_DEDENNE,      // 1%
+        SPECIES_ESPURR,       // 1%
+    },
+    .speciesDay = {
+        SPECIES_HOPPIP,
+        SPECIES_SENTRET,
+        SPECIES_NIDORAN_F,
+        SPECIES_NIDORAN_M,
+        SPECIES_SUNKERN,
+        SPECIES_PIDGEY,
+        SPECIES_BUDEW,
+        SPECIES_SKITTY,
+        SPECIES_LOTAD,
+        SPECIES_COMBEE,
+        SPECIES_PACHIRISU,    // 1%
+        SPECIES_FOONGUS,      // 1%
+    },
+    .speciesNight = {
+        SPECIES_HOPPIP,
+        SPECIES_SENTRET,
+        SPECIES_NIDORAN_F,
+        SPECIES_NIDORAN_M,
+        SPECIES_SUNKERN,
+        SPECIES_HOOTHOOT,
+        SPECIES_BUDEW,
+        SPECIES_SKITTY,
+        SPECIES_LOTAD,
+        SPECIES_COMBEE,
+        SPECIES_ESPURR,       // 1%
+        SPECIES_FOONGUS,      // 1%
+    },
+},
         .hoennSoundSpecies = {
             SPECIES_PLUSLE,
             SPECIES_MINUN,
@@ -2416,52 +2416,52 @@ const EncounterData __data[] =
         .rateGoodRod = 0,
         .rateSuperRod = 0,
         .landSlots = {
-            .levels = {
-                10, 10, 10, 10, 12, 12, 12, 12, 10, 14, 10, 14
-            },
-            .speciesMorning = {
-                SPECIES_CATERPIE,
-                SPECIES_CATERPIE,
-                SPECIES_CATERPIE,
-                SPECIES_CATERPIE,
-                SPECIES_CATERPIE,
-                SPECIES_CATERPIE,
-                SPECIES_CATERPIE,
-                SPECIES_CATERPIE,
-                SPECIES_CATERPIE,
-                SPECIES_CATERPIE,
-                SPECIES_CATERPIE,
-                SPECIES_CATERPIE,
-            },
-            .speciesDay = {
-                SPECIES_CATERPIE,
-                SPECIES_CATERPIE,
-                SPECIES_CATERPIE,
-                SPECIES_CATERPIE,
-                SPECIES_CATERPIE,
-                SPECIES_CATERPIE,
-                SPECIES_CATERPIE,
-                SPECIES_CATERPIE,
-                SPECIES_CATERPIE,
-                SPECIES_CATERPIE,
-                SPECIES_CATERPIE,
-                SPECIES_CATERPIE,
-            },
-            .speciesNight = {
-                SPECIES_CATERPIE,
-                SPECIES_CATERPIE,
-                SPECIES_CATERPIE,
-                SPECIES_CATERPIE,
-                SPECIES_CATERPIE,
-                SPECIES_CATERPIE,
-                SPECIES_CATERPIE,
-                SPECIES_CATERPIE,
-                SPECIES_CATERPIE,
-                SPECIES_CATERPIE,
-                SPECIES_CATERPIE,
-                SPECIES_CATERPIE,
-            },
-        },
+    .levels = {
+        24, 24, 25, 25, 25, 25, 26, 26, 27, 27, 28, 28
+    },
+    .speciesMorning = {
+        SPECIES_METAPOD, // 20%
+        SPECIES_KAKUNA,  // 20%
+        SPECIES_BUTTERFREE,   // 10%
+        SPECIES_BEEDRILL,  // 10%
+        SPECIES_ARIADOS,  // 10%
+        SPECIES_LEDIAN,   // 10%
+        SPECIES_SHUCKLE,  // 5%
+        SPECIES_SCYTHER,    // 5%
+        SPECIES_PINSIR,     // 4%
+        SPECIES_HERACROSS,    // 4%
+        SPECIES_KLEAVOR,      // 1%
+        SPECIES_GALVANTULA,   // 1%
+    },
+    .speciesDay = {
+        SPECIES_METAPOD, // 20%
+        SPECIES_KAKUNA,  // 20%
+        SPECIES_BUTTERFREE,   // 10%
+        SPECIES_BEEDRILL,  // 10%
+        SPECIES_ARIADOS,  // 10%
+        SPECIES_LEDIAN,   // 10%
+        SPECIES_SHUCKLE,  // 5%
+        SPECIES_SCYTHER,    // 5%
+        SPECIES_PINSIR,     // 4%
+        SPECIES_HERACROSS,    // 4%
+        SPECIES_KLEAVOR,      // 1%
+        SPECIES_ESCAVALIER,   // 1%
+    },
+    .speciesNight = {
+        SPECIES_METAPOD, // 20%
+        SPECIES_KAKUNA,  // 20%
+        SPECIES_BUTTERFREE,   // 10%
+        SPECIES_BEEDRILL,  // 10%
+        SPECIES_ARIADOS,  // 10%
+        SPECIES_LEDIAN,   // 10%
+        SPECIES_SHUCKLE,  // 5%
+        SPECIES_SCYTHER,    // 5%
+        SPECIES_PINSIR,     // 4%
+        SPECIES_HERACROSS,    // 4%
+        SPECIES_KLEAVOR,      // 1%
+        SPECIES_VESPIQUEN,   // 1%
+    },
+},
         .hoennSoundSpecies = {
             SPECIES_CATERPIE,
             SPECIES_CATERPIE,
@@ -2516,52 +2516,52 @@ const EncounterData __data[] =
         .rateGoodRod = 0,
         .rateSuperRod = 0,
         .landSlots = {
-            .levels = {
-                12, 12, 12, 12, 13, 13, 13, 13, 13, 15, 13, 15
-            },
-            .speciesMorning = {
-                SPECIES_NIDORAN_M,
-                SPECIES_NIDORAN_F,
-                SPECIES_NIDORAN_M,
-                SPECIES_NIDORAN_F,
-                SPECIES_PIDGEY,
-                SPECIES_PIDGEY,
-                SPECIES_GROWLITHE,
-                SPECIES_GROWLITHE,
-                SPECIES_STANTLER,
-                SPECIES_PIDGEY,
-                SPECIES_STANTLER,
-                SPECIES_PIDGEY,
-            },
-            .speciesDay = {
-                SPECIES_NIDORAN_M,
-                SPECIES_NIDORAN_F,
-                SPECIES_NIDORAN_M,
-                SPECIES_NIDORAN_F,
-                SPECIES_PIDGEY,
-                SPECIES_PIDGEY,
-                SPECIES_GROWLITHE,
-                SPECIES_GROWLITHE,
-                SPECIES_STANTLER,
-                SPECIES_GROWLITHE,
-                SPECIES_STANTLER,
-                SPECIES_GROWLITHE,
-            },
-            .speciesNight = {
-                SPECIES_NIDORAN_M,
-                SPECIES_NIDORAN_F,
-                SPECIES_NIDORAN_M,
-                SPECIES_NIDORAN_F,
-                SPECIES_HOOTHOOT,
-                SPECIES_HOOTHOOT,
-                SPECIES_GROWLITHE,
-                SPECIES_GROWLITHE,
-                SPECIES_STANTLER,
-                SPECIES_HOOTHOOT,
-                SPECIES_STANTLER,
-                SPECIES_HOOTHOOT,
-            },
-        },
+    .levels = {
+        24, 24, 24, 25, 25, 25, 25, 26, 26, 26, 27, 27
+    },
+    .speciesMorning = {
+        SPECIES_GIRAFARIG,
+        SPECIES_STANTLER,
+        SPECIES_HOOTHOOT,
+        SPECIES_MISDREAVUS,
+        SPECIES_MURKROW,
+        SPECIES_NATU,
+        SPECIES_ODDISH,
+        SPECIES_NOCTOWL,
+        SPECIES_GLOOM,
+        SPECIES_XATU,
+        SPECIES_PHANTUMP,
+        SPECIES_PUMPKABOO,
+    },
+    .speciesDay = {
+        SPECIES_GIRAFARIG,
+        SPECIES_STANTLER,
+        SPECIES_HOOTHOOT,
+        SPECIES_MISDREAVUS,
+        SPECIES_MURKROW,
+        SPECIES_NATU,
+        SPECIES_ODDISH,
+        SPECIES_NOCTOWL,
+        SPECIES_GLOOM,
+        SPECIES_XATU,
+        SPECIES_PHANTUMP,
+        SPECIES_PUMPKABOO,
+    },
+    .speciesNight = {
+        SPECIES_GIRAFARIG,
+        SPECIES_STANTLER,
+        SPECIES_HOOTHOOT,
+        SPECIES_MISDREAVUS,
+        SPECIES_MURKROW,
+        SPECIES_NATU,
+        SPECIES_ODDISH,
+        SPECIES_NOCTOWL,
+        SPECIES_GLOOM,
+        SPECIES_XATU,
+        SPECIES_PHANTUMP,
+        SPECIES_PUMPKABOO,
+    },
+},
         .hoennSoundSpecies = {
             SPECIES_PLUSLE,
             SPECIES_MINUN,
@@ -2616,52 +2616,52 @@ const EncounterData __data[] =
         .rateGoodRod = 0,
         .rateSuperRod = 0,
         .landSlots = {
-            .levels = {
-                13, 15, 13, 15, 15, 15, 14, 14, 15, 15, 15, 15
-            },
-            .speciesMorning = {
-                SPECIES_PIDGEY,
-                SPECIES_STANTLER,
-                SPECIES_PIDGEY,
-                SPECIES_STANTLER,
-                SPECIES_PIDGEY,
-                SPECIES_PIDGEY,
-                SPECIES_GROWLITHE,
-                SPECIES_GROWLITHE,
-                SPECIES_PIDGEY,
-                SPECIES_PIDGEY,
-                SPECIES_PIDGEY,
-                SPECIES_PIDGEY,
-            },
-            .speciesDay = {
-                SPECIES_PIDGEY,
-                SPECIES_STANTLER,
-                SPECIES_PIDGEY,
-                SPECIES_STANTLER,
-                SPECIES_PIDGEY,
-                SPECIES_PIDGEY,
-                SPECIES_GROWLITHE,
-                SPECIES_GROWLITHE,
-                SPECIES_PIDGEOTTO,
-                SPECIES_GROWLITHE,
-                SPECIES_PIDGEOTTO,
-                SPECIES_GROWLITHE,
-            },
-            .speciesNight = {
-                SPECIES_SPINARAK,
-                SPECIES_STANTLER,
-                SPECIES_SPINARAK,
-                SPECIES_STANTLER,
-                SPECIES_HOOTHOOT,
-                SPECIES_HOOTHOOT,
-                SPECIES_GROWLITHE,
-                SPECIES_GROWLITHE,
-                SPECIES_SPINARAK,
-                SPECIES_SPINARAK,
-                SPECIES_SPINARAK,
-                SPECIES_SPINARAK,
-            },
-        },
+    .levels = {
+        25, 25, 25, 26, 26, 26, 26, 27, 27, 27, 28, 28
+    },
+    .speciesMorning = {
+        SPECIES_GIRAFARIG,
+        SPECIES_STANTLER,
+        SPECIES_HOOTHOOT,
+        SPECIES_MISDREAVUS,
+        SPECIES_MURKROW,
+        SPECIES_NATU,
+        SPECIES_ODDISH,
+        SPECIES_NOCTOWL,
+        SPECIES_GLOOM,
+        SPECIES_XATU,
+        SPECIES_SHUPPET,
+        SPECIES_DUSKULL,
+    },
+    .speciesDay = {
+        SPECIES_GIRAFARIG,
+        SPECIES_STANTLER,
+        SPECIES_HOOTHOOT,
+        SPECIES_MISDREAVUS,
+        SPECIES_MURKROW,
+        SPECIES_NATU,
+        SPECIES_ODDISH,
+        SPECIES_NOCTOWL,
+        SPECIES_GLOOM,
+        SPECIES_XATU,
+        SPECIES_SHUPPET,
+        SPECIES_DUSKULL,
+    },
+    .speciesNight = {
+        SPECIES_GIRAFARIG,
+        SPECIES_STANTLER,
+        SPECIES_HOOTHOOT,
+        SPECIES_MISDREAVUS,
+        SPECIES_MURKROW,
+        SPECIES_NATU,
+        SPECIES_ODDISH,
+        SPECIES_NOCTOWL,
+        SPECIES_GLOOM,
+        SPECIES_XATU,
+        SPECIES_SHUPPET,
+        SPECIES_DUSKULL,
+    },
+},
         .hoennSoundSpecies = {
             SPECIES_PLUSLE,
             SPECIES_MINUN,

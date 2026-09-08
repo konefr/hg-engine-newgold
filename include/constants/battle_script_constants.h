@@ -528,7 +528,7 @@
 #define BATTLE_SUBSCRIPT_FELL_STRAIGHT_DOWN                     (519)
 
 #define MAX_BASE_SUBSCRIPT_NUM 519
-
+#define BATTLE_SUBSCRIPT_ABSORB_AND_ATK_UP_2_STAGE (MAX_BASE_SUBSCRIPT_NUM + 1)
 // define your custom subscripts below like this
 // #define MOVE_SUBSCRIPT_CUSTOM_1 (MAX_BASE_SUBSCRIPT_NUM + 1)
 

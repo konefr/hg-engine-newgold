@@ -327,7 +327,7 @@
 #define ABILITY_PIERCING_DRILL   311
 #define ABILITY_DRAGONIZE        312
 #define ABILITY_EELEVATE         313
-#define ABILITY_TEMP2            314
+#define ABILITY_IRRIGATION       314
 #define ABILITY_MEGA_SOL         315
 #define ABILITY_FIRE_MANE        316
 #define ABILITY_TEMP4            317

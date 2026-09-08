@@ -27339,6 +27339,10 @@
         "Move": "MOVE_GROWL"
       },
       {
+        "Level": 3,
+        "Move": "MOVE_DEFENSE_CURL"
+      },
+      {
         "Level": 6,
         "Move": "MOVE_RAZOR_LEAF"
       },
@@ -27347,8 +27351,12 @@
         "Move": "MOVE_POISON_POWDER"
       },
       {
-        "Level": 12,
+        "Level": 11,
         "Move": "MOVE_SYNTHESIS"
+      },
+      {
+        "Level": 13,
+        "Move": "MOVE_ROLLOUT"
       },
       {
         "Level": 17,
@@ -27359,8 +27367,12 @@
         "Move": "MOVE_MAGICAL_LEAF"
       },
       {
-        "Level": 23,
+        "Level": 22,
         "Move": "MOVE_LEECH_SEED"
+      },
+      {
+        "Level": 25,
+        "Move": "MOVE_MEGA_DRAIN"
       },
       {
         "Level": 28,

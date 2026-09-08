@@ -71,6 +71,14 @@ int MoveCheckDamageNegatingAbilities(struct BattleStruct *sp, int attacker, int 
             scriptnum = BATTLE_SUBSCRIPT_ABILITY_RESTORES_HP;
         }
     }
+    // Handle Irrigation
+    if (MoldBreakerAbilityCheck(sp, attacker, defender, ABILITY_IRRIGATION) == TRUE) {
+        if ((movetype == TYPE_WATER)
+            && ((sp->server_status_flag & SERVER_STATUS_FLAG_x20) == 0)
+            && (attacker != defender)) {
+            scriptnum = BATTLE_SUBSCRIPT_ABSORB_AND_ATK_UP_2_STAGE;
+        }
+    }
 
     // 02252F6A
     if (MoldBreakerAbilityCheck(sp, attacker, defender, ABILITY_FLASH_FIRE) == TRUE) {

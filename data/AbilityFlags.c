@@ -14,6 +14,7 @@ const AbilityFlags UNUSED sAbilityFlags[] = {
     [ABILITY_SAND_VEIL] = { .ignoredByMoldBreaker = TRUE, .disabledByNeutralizingGas = TRUE },
     [ABILITY_STATIC] = { .disabledByNeutralizingGas = TRUE },
     [ABILITY_VOLT_ABSORB] = { .ignoredByMoldBreaker = TRUE, .disabledByNeutralizingGas = TRUE },
+    [ABILITY_IRRIGATION] = { .ignoredByMoldBreaker = TRUE, .disabledByNeutralizingGas = TRUE},
     [ABILITY_WATER_ABSORB] = { .ignoredByMoldBreaker = TRUE, .disabledByNeutralizingGas = TRUE },
     [ABILITY_OBLIVIOUS] = { .ignoredByMoldBreaker = TRUE, .disabledByNeutralizingGas = TRUE },
     [ABILITY_CLOUD_NINE] = { .disabledByNeutralizingGas = TRUE },
