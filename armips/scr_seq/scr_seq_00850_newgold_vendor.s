@@ -92,13 +92,22 @@ NewGold_MainMenu:
 NewGold_EVMenu:
     npc_msg 51 // First party Pokemon
     scrcmd_065 1, 1, 0, 1, VAR_SPECIAL_RESULT
-    scrcmd_066 52, 0 // Physical
-    scrcmd_066 53, 1 // Special
-    scrcmd_066 54, 2 // Physical Tank
-    scrcmd_066 55, 3 // Special Tank
-    scrcmd_066 56, 4 // Balanced
-    scrcmd_066 57, 5 // Reset EVs
-    scrcmd_066 58, 6 // Back
+
+    scrcmd_066 52, 0  // Physical
+    scrcmd_066 53, 1  // Special
+    scrcmd_066 54, 2  // Physical Tank
+    scrcmd_066 55, 3  // Special Tank
+    scrcmd_066 56, 4  // Balanced
+
+    scrcmd_066 60, 5  // Bulk Physical
+    scrcmd_066 61, 6  // Bulk Special
+    scrcmd_066 62, 7  // Mixed Tank
+    scrcmd_066 63, 8  // Fast Bulk Physical
+    scrcmd_066 64, 9  // Fast Bulk Special
+    scrcmd_066 65, 10 // Fast Bulk
+
+    scrcmd_066 57, 11 // Reset EVs
+    scrcmd_066 58, 12 // Back
     scrcmd_067
 
     compare_var_to_value VAR_SPECIAL_RESULT, 0
@@ -117,10 +126,27 @@ NewGold_EVMenu:
     goto_if 1, NewGold_EVBalanced
 
     compare_var_to_value VAR_SPECIAL_RESULT, 5
+    goto_if 1, NewGold_EVBulkPhysical
+
+    compare_var_to_value VAR_SPECIAL_RESULT, 6
+    goto_if 1, NewGold_EVBulkSpecial
+
+    compare_var_to_value VAR_SPECIAL_RESULT, 7
+    goto_if 1, NewGold_EVMixedTank
+
+    compare_var_to_value VAR_SPECIAL_RESULT, 8
+    goto_if 1, NewGold_EVFastBulkPhysical
+
+    compare_var_to_value VAR_SPECIAL_RESULT, 9
+    goto_if 1, NewGold_EVFastBulkSpecial
+
+    compare_var_to_value VAR_SPECIAL_RESULT, 10
+    goto_if 1, NewGold_EVFastBulk
+
+    compare_var_to_value VAR_SPECIAL_RESULT, 11
     goto_if 1, NewGold_EVReset
 
     goto NewGold_MainMenu
-
 
 NewGold_EVPhysical:
     give_egg 2001, 0
@@ -141,6 +167,30 @@ NewGold_EVSpTank:
 NewGold_EVBalanced:
     give_egg 2005, 0
     goto NewGold_EVSuccess
+
+NewGold_EVBulkPhysical:
+    give_egg 2006, 0
+    goto NewGold_EVSuccess
+
+NewGold_EVBulkSpecial:
+    give_egg 2007, 0
+    goto NewGold_EVSuccess
+
+NewGold_EVMixedTank:
+    give_egg 2008, 0
+    goto NewGold_EVSuccess
+
+NewGold_EVFastBulkPhysical:
+    give_egg 2009, 0
+    goto NewGold_EVSuccess
+
+NewGold_EVFastBulkSpecial:
+    give_egg 2010, 0
+    goto NewGold_EVSuccess
+
+NewGold_EVFastBulk:
+    give_egg 2011, 0
+    goto NewGold_EVSuccess   
 
 NewGold_EVReset:
     give_egg 2000, 0

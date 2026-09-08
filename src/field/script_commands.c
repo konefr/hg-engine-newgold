@@ -29,12 +29,19 @@ void SetupAndStartTotemBattle(TaskManager *taskManager, u16 species, u8 level, u
  *  @return FALSE
  */
 
-#define DEV_EV_PRESET_RESET          2000
-#define DEV_EV_PRESET_PHYSICAL       2001
-#define DEV_EV_PRESET_SPECIAL        2002
-#define DEV_EV_PRESET_PHYS_TANK      2003
-#define DEV_EV_PRESET_SP_TANK        2004
-#define DEV_EV_PRESET_BALANCED       2005
+#define DEV_EV_PRESET_RESET              2000
+#define DEV_EV_PRESET_PHYSICAL           2001
+#define DEV_EV_PRESET_SPECIAL            2002
+#define DEV_EV_PRESET_PHYS_TANK          2003
+#define DEV_EV_PRESET_SP_TANK            2004
+#define DEV_EV_PRESET_BALANCED           2005
+#define DEV_EV_PRESET_BULK_PHYSICAL      2006
+#define DEV_EV_PRESET_BULK_SPECIAL       2007
+#define DEV_EV_PRESET_MIXED_TANK         2008
+#define DEV_EV_PRESET_FAST_BULK_PHYS     2009
+#define DEV_EV_PRESET_FAST_BULK_SPECIAL  2010
+#define DEV_EV_PRESET_FAST_BULK     2011
+
 
 BOOL ScrCmd_GiveEgg(SCRIPTCONTEXT *ctx)
 {
@@ -46,9 +53,9 @@ BOOL ScrCmd_GiveEgg(SCRIPTCONTEXT *ctx)
     u16 offset = ScriptGetVar(ctx);
 
     // Developer-only EV presets.
-    // Values 2000-2005 are deliberately invalid Pokémon species IDs.
+        // Values 2000-2011 are deliberately invalid Pokémon species IDs.
     if (species >= DEV_EV_PRESET_RESET &&
-        species <= DEV_EV_PRESET_BALANCED)
+        species <= DEV_EV_PRESET_FAST_BULK)
     {
         struct Party *party = SaveData_GetPlayerPartyPtr(fsys->savedata);
 
@@ -107,6 +114,48 @@ BOOL ScrCmd_GiveEgg(SCRIPTCONTEXT *ctx)
             evs[4] = 84;
             evs[5] = 84;
             break;
+
+        case DEV_EV_PRESET_BULK_PHYSICAL:
+            // 252 HP / 252 Atk / 4 Spe
+            evs[0] = 252;
+            evs[1] = 252;
+            evs[3] = 4;
+            break;
+
+        case DEV_EV_PRESET_BULK_SPECIAL:
+            // 252 HP / 252 SpA / 4 Spe
+            evs[0] = 252;
+            evs[3] = 4;
+            evs[4] = 252;
+            break;
+
+        case DEV_EV_PRESET_MIXED_TANK:
+            // 252 HP / 128 Def / 128 SpDef
+            evs[0] = 252;
+            evs[2] = 128;
+            evs[5] = 128;
+            break;
+
+        case DEV_EV_PRESET_FAST_BULK_SPECIAL:
+            // 128 HP / 128 Sp.Def  / 252 Spe
+            evs[0] = 128;
+            evs[3] = 252; // speed
+            evs[5] = 128;
+            break;
+
+        case DEV_EV_PRESET_FAST_BULK_PHYS:
+            // 128 HP / 128 Def  / 252 Spe
+            evs[0] = 128;
+            evs[2] = 128;
+            evs[3] = 252;
+            break;
+
+        case DEV_EV_PRESET_FAST_BULK:
+            // 252 HP / 252 Spe
+            evs[0] = 252;
+            evs[3] = 252;
+            break;
+
 
         case DEV_EV_PRESET_RESET:
         default:

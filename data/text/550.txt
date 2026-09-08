@@ -58,3 +58,9 @@ Balanced
 Reset EVs
 Back
 EVs updated!
+Bulk Physical
+Bulk Special
+Mixed Tank
+Fast Bulk Physical
+Fast Bulk Special
+Fast Bulk
