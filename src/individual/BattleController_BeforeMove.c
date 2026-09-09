@@ -3577,18 +3577,21 @@ BOOL BattleController_CheckAbilityFailures4_StatusBasedFailures(struct BattleSys
         }
     }
 
-    // Rest : No Stomping Tantrum doubling
-    if (ShieldsDownCanActivate || MoldBreakerAbilityCheck(ctx, attacker, defender, ABILITY_LEAF_GUARD)) {
-        if (moveEffect == MOVE_EFFECT_RECOVER_HEALTH_AND_SLEEP) {
-            BattleController_ResetGeneralMoveFailureFlags(ctx, ctx->attack_client, FALSE);
-            ctx->moveStatusFlagForSpreadMoves[defender] = MOVE_STATUS_FAILED;
-            ctx->battlerIdTemp = defender;
-            LoadBattleSubSeqScript(ctx, ARC_BATTLE_SUB_SEQ, BATTLE_SUBSCRIPT_DOESNT_AFFECT_ABILITY);
-            ctx->next_server_seq_no = ctx->server_seq_no;
-            ctx->server_seq_no = CONTROLLER_COMMAND_RUN_SCRIPT;
-            return TRUE;
-        }
+   // Rest : No Stomping Tantrum doubling
+if (ShieldsDownCanActivate
+    || (MoldBreakerAbilityCheck(ctx, attacker, defender, ABILITY_LEAF_GUARD)
+        && (GetWeather(bsys, ctx, defender) & FIELD_CONDITION_SUN_ALL))) {
+
+    if (moveEffect == MOVE_EFFECT_RECOVER_HEALTH_AND_SLEEP) {
+        BattleController_ResetGeneralMoveFailureFlags(ctx, ctx->attack_client, FALSE);
+        ctx->moveStatusFlagForSpreadMoves[defender] = MOVE_STATUS_FAILED;
+        ctx->battlerIdTemp = defender;
+        LoadBattleSubSeqScript(ctx, ARC_BATTLE_SUB_SEQ, BATTLE_SUBSCRIPT_DOESNT_AFFECT_ABILITY);
+        ctx->next_server_seq_no = ctx->server_seq_no;
+        ctx->server_seq_no = CONTROLLER_COMMAND_RUN_SCRIPT;
+        return TRUE;
     }
+}
 
     // Rest : No Stomping Tantrum doubling //TODO
     if (hasSweetVeil) {
@@ -3603,11 +3606,12 @@ BOOL BattleController_CheckAbilityFailures4_StatusBasedFailures(struct BattleSys
         }
     }
 
-    if (MoldBreakerAbilityCheck(ctx, attacker, defender, ABILITY_COMATOSE)
-        || MoldBreakerAbilityCheck(ctx, attacker, defender, ABILITY_LEAF_GUARD)
-        || ShieldsDownCanActivate) {
-        doChecking = TRUE;
-    }
+   if (MoldBreakerAbilityCheck(ctx, attacker, defender, ABILITY_COMATOSE)
+    || (MoldBreakerAbilityCheck(ctx, attacker, defender, ABILITY_LEAF_GUARD)
+        && (GetWeather(bsys, ctx, defender) & FIELD_CONDITION_SUN_ALL))
+    || ShieldsDownCanActivate) {
+    doChecking = TRUE;
+}
 
     if ((MoldBreakerAbilityCheck(ctx, attacker, defender, ABILITY_IMMUNITY) || hasPastelVeil)
         && (moveEffect == MOVE_EFFECT_STATUS_POISON || moveEffect == MOVE_EFFECT_STATUS_BADLY_POISON)) {

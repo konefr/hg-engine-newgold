@@ -33646,6 +33646,10 @@
         "Move": "MOVE_BULLET_SEED"
       },
       {
+        "Level": 19,
+        "Move": "MOVE_SUNNY_DAY"
+      },
+      {
         "Level": 20,
         "Move": "MOVE_LEECH_SEED"
       },
