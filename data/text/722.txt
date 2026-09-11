@@ -311,8 +311,8 @@ Reduces effects of weather\nand terrain to zero.
 Poison-inflicting moves\nwill also cause confusion.
 The Pokémon’s contact\nmoves ignore protections.
 Normal-type moves become\nDragon-type and powered up.
-Placeholder
-Placeholder
+Grants Ground immunity.\nRaises its highest stat after a KO.
+Absorbs Water-type moves\nand sharply raises Attack.
 All moves act as if\nHarsh Sunlight is active.
 Placeholder
 Placeholder
