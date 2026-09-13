@@ -4564,49 +4564,52 @@ Battaglia prima di Morty. Una sola variante viene usata in base allo starter.
 
 ```c
     [263] = {
-        .name = "Silver",
-        .data = {
-            .trainerType = TRAINER_DATA_TYPE_MOVES,
-            .trainerClass = TRAINERCLASS_RIVAL,
-            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
-            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_PRIORITIZE_DAMAGE,
-            .battleType = SINGLE_BATTLE,
+    .name = "Silver",
+    .data = {
+        .trainerType = TRAINER_DATA_TYPE_NOTHING,
+        .trainerClass = TRAINERCLASS_RIVAL,
+        .items = { ITEM_SUPER_POTION, ITEM_SUPER_POTION, ITEM_NONE, ITEM_NONE },
+        .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE,
+        .battleType = SINGLE_BATTLE,
+    },
+    .party = {
+        {
+            .ivs = 180,
+            .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+            .level = 31,
+            .species = SPECIES_GOLBAT,
+            .ballSeal = 0,
         },
-        .party = {
-            {
-                .ivs = 80,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 20,
-                .species = SPECIES_GASTLY,
-                .moves = { MOVE_LICK, MOVE_CONFUSE_RAY, MOVE_MEAN_LOOK, MOVE_CURSE },
-                .ballSeal = 0,
-            },
-            {
-                .ivs = 80,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 18,
-                .species = SPECIES_MAGNEMITE,
-                .moves = { MOVE_THUNDER_WAVE, MOVE_THUNDER_SHOCK, MOVE_SUPERSONIC, MOVE_SONIC_BOOM },
-                .ballSeal = 0,
-            },
-            {
-                .ivs = 80,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 20,
-                .species = SPECIES_ZUBAT,
-                .moves = { MOVE_ASTONISH, MOVE_SUPERSONIC, MOVE_BITE, MOVE_WING_ATTACK },
-                .ballSeal = 0,
-            },
-            {
-                .ivs = 80,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 22,
-                .species = SPECIES_BAYLEEF,
-                .moves = { MOVE_SYNTHESIS, MOVE_REFLECT, MOVE_MAGICAL_LEAF, MOVE_POISON_POWDER },
-                .ballSeal = 0,
-            },
+        {
+            .ivs = 180,
+            .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+            .level = 32,
+            .species = SPECIES_MAGNETON,
+            .ballSeal = 0,
+        },
+        {
+            .ivs = 180,
+            .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+            .level = 32,
+            .species = SPECIES_MISDREAVUS,
+            .ballSeal = 0,
+        },
+        {
+            .ivs = 200,
+            .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+            .level = 33,
+            .species = SPECIES_URSARING,
+            .ballSeal = 0,
+        },
+        {
+            .ivs = 200,
+            .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+            .level = 34,
+            .species = SPECIES_BAYLEEF, // oppure QUILAVA / CROCONAW
+            .ballSeal = 0,
         },
     },
+},
 ```
 
 #### HeartGold Modern — worklog
@@ -4645,45 +4648,48 @@ Battaglia prima di Morty. Una sola variante viene usata in base allo starter.
         .data = {
             .trainerType = TRAINER_DATA_TYPE_MOVES,
             .trainerClass = TRAINERCLASS_RIVAL,
-            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
-            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_PRIORITIZE_DAMAGE,
-            .battleType = SINGLE_BATTLE,
+           .items = { ITEM_SUPER_POTION, ITEM_SUPER_POTION, ITEM_NONE, ITEM_NONE },
+        .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE,
+        .battleType = SINGLE_BATTLE,
+    },
+    .party = {
+        {
+            .ivs = 180,
+            .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+            .level = 31,
+            .species = SPECIES_GOLBAT,
+            .ballSeal = 0,
         },
-        .party = {
-            {
-                .ivs = 80,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 20,
-                .species = SPECIES_GASTLY,
-                .moves = { MOVE_LICK, MOVE_CONFUSE_RAY, MOVE_MEAN_LOOK, MOVE_CURSE },
-                .ballSeal = 0,
-            },
-            {
-                .ivs = 80,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 18,
-                .species = SPECIES_MAGNEMITE,
-                .moves = { MOVE_THUNDER_WAVE, MOVE_THUNDER_SHOCK, MOVE_SUPERSONIC, MOVE_SONIC_BOOM },
-                .ballSeal = 0,
-            },
-            {
-                .ivs = 80,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 20,
-                .species = SPECIES_ZUBAT,
-                .moves = { MOVE_ASTONISH, MOVE_SUPERSONIC, MOVE_BITE, MOVE_WING_ATTACK },
-                .ballSeal = 0,
-            },
-            {
-                .ivs = 80,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 22,
-                .species = SPECIES_QUILAVA,
-                .moves = { MOVE_FLAME_WHEEL, MOVE_SMOKESCREEN, MOVE_EMBER, MOVE_QUICK_ATTACK },
-                .ballSeal = 0,
-            },
+        {
+            .ivs = 180,
+            .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+            .level = 32,
+            .species = SPECIES_MAGNETON,
+            .ballSeal = 0,
+        },
+        {
+            .ivs = 180,
+            .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+            .level = 32,
+            .species = SPECIES_MISDREAVUS,
+            .ballSeal = 0,
+        },
+        {
+            .ivs = 200,
+            .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+            .level = 33,
+            .species = SPECIES_URSARING,
+            .ballSeal = 0,
+        },
+        {
+            .ivs = 200,
+            .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+            .level = 34,
+            .species = SPECIES_QUILAVA,
+            .ballSeal = 0,
         },
     },
+},
 ```
 
 #### HeartGold Modern — worklog
@@ -4722,45 +4728,48 @@ Battaglia prima di Morty. Una sola variante viene usata in base allo starter.
         .data = {
             .trainerType = TRAINER_DATA_TYPE_MOVES,
             .trainerClass = TRAINERCLASS_RIVAL,
-            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
-            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_PRIORITIZE_DAMAGE,
-            .battleType = SINGLE_BATTLE,
+           .items = { ITEM_SUPER_POTION, ITEM_SUPER_POTION, ITEM_NONE, ITEM_NONE },
+        .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE,
+        .battleType = SINGLE_BATTLE,
+    },
+    .party = {
+        {
+            .ivs = 180,
+            .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+            .level = 31,
+            .species = SPECIES_GOLBAT,
+            .ballSeal = 0,
         },
-        .party = {
-            {
-                .ivs = 80,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 20,
-                .species = SPECIES_GASTLY,
-                .moves = { MOVE_LICK, MOVE_CONFUSE_RAY, MOVE_MEAN_LOOK, MOVE_CURSE },
-                .ballSeal = 0,
-            },
-            {
-                .ivs = 80,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 18,
-                .species = SPECIES_MAGNEMITE,
-                .moves = { MOVE_THUNDER_WAVE, MOVE_THUNDER_SHOCK, MOVE_SUPERSONIC, MOVE_SONIC_BOOM },
-                .ballSeal = 0,
-            },
-            {
-                .ivs = 80,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 20,
-                .species = SPECIES_ZUBAT,
-                .moves = { MOVE_ASTONISH, MOVE_SUPERSONIC, MOVE_BITE, MOVE_WING_ATTACK },
-                .ballSeal = 0,
-            },
-            {
-                .ivs = 80,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 22,
-                .species = SPECIES_CROCONAW,
-                .moves = { MOVE_SCARY_FACE, MOVE_ICE_FANG, MOVE_WATER_GUN, MOVE_BITE },
-                .ballSeal = 0,
-            },
+        {
+            .ivs = 180,
+            .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+            .level = 32,
+            .species = SPECIES_MAGNETON,
+            .ballSeal = 0,
+        },
+        {
+            .ivs = 180,
+            .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+            .level = 32,
+            .species = SPECIES_MISDREAVUS,
+            .ballSeal = 0,
+        },
+        {
+            .ivs = 200,
+            .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+            .level = 33,
+            .species = SPECIES_URSARING,
+            .ballSeal = 0,
+        },
+        {
+            .ivs = 200,
+            .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+            .level = 34,
+            .species = SPECIES_CROCONAW,
+            .ballSeal = 0,
         },
     },
+},
 ```
 
 #### HeartGold Modern — worklog

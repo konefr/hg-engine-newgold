@@ -2836,7 +2836,7 @@ const EncounterData __data[] =
             .speciesDay = {
                 SPECIES_SLUGMA,
                 SPECIES_KOFFING,
-                SPECIES_GROWLITHE,
+                SPECIES_MISDREAVUS,
                 SPECIES_MAGMAR,
                 SPECIES_GASTLY,
                 SPECIES_HAUNTER,
@@ -2850,7 +2850,7 @@ const EncounterData __data[] =
             .speciesNight = {
                 SPECIES_SLUGMA,
                 SPECIES_KOFFING,
-                SPECIES_GROWLITHE,
+                SPECIES_MISDREAVUS,
                 SPECIES_MAGMAR,
                 SPECIES_GASTLY,
                 SPECIES_HAUNTER,
@@ -2926,7 +2926,7 @@ const EncounterData __data[] =
                 SPECIES_MAGMAR,
                 SPECIES_HOUNDOUR,
                 SPECIES_HAUNTER,
-                SPECIES_MAGMAR,
+                SPECIES_MISDREAVUS,
                 SPECIES_GOLBAT,
                 SPECIES_LITWICK,
                 SPECIES_GROWLITHE,
@@ -2936,7 +2936,7 @@ const EncounterData __data[] =
             .speciesDay = {
                 SPECIES_SLUGMA,
                 SPECIES_HOUNDOUR,
-                SPECIES_GROWLITHE,
+                SPECIES_MISDREAVUS,
                 SPECIES_MAGMAR,
                 SPECIES_HOUNDOUR,
                 SPECIES_HAUNTER,
@@ -2950,7 +2950,7 @@ const EncounterData __data[] =
             .speciesNight = {
                 SPECIES_SLUGMA,
                 SPECIES_HOUNDOUR,
-                SPECIES_GROWLITHE,
+                SPECIES_MISDREAVUS,
                 SPECIES_MAGMAR,
                 SPECIES_HOUNDOUR,
                 SPECIES_HAUNTER,
