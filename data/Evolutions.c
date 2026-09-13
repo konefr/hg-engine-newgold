@@ -2578,7 +2578,7 @@ const EvolutionTable __data[MAX_SPECIES_INCLUDING_FORMS + 1] =
 
     [SPECIES_MARILL] = {
         .entries = {
-            { EVO_LEVEL, 18, SPECIES_AZUMARILL },
+            { EVO_LEVEL, 22, SPECIES_AZUMARILL },
             { EVO_NONE, 0, SPECIES_NONE },
             { EVO_NONE, 0, SPECIES_NONE },
             { EVO_NONE, 0, SPECIES_NONE },

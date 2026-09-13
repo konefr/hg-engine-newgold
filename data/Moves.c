@@ -24948,4 +24948,32 @@ const MoveSourceEntry sMoveSource[NUM_OF_MOVES + 1] = {
         },
         .description = "",
     },
+
+    [MOVE_SOLAR_SEEDS] = {
+    .names = {
+        .name = "Solar Seeds",
+        .capsName = "SOLAR SEEDS",
+        .fullName = "Solar Seeds",
+    },
+    .data = {
+        .effect = MOVE_EFFECT_BURN_MULTI_HIT,
+        .split = SPLIT_SPECIAL,
+        .power = 25,
+        .type = TYPE_FIRE,
+        .accuracy = 100,
+        .pp = 10,
+        .effectChance = 5,
+    },
+    .battle = {
+        .target = RANGE_SINGLE_TARGET,
+        .priority = 0,
+        .flags = FLAG_KEEP_HP_BAR | FLAG_MIRROR_MOVE | FLAG_PROTECT,
+    },
+    .contest = {
+        .appeal = APPEAL_SUCCESSIVE,
+        .contestType = CONTEST_BEAUTY,
+    },
+    .description = "The user launches\\nblazing seeds two to\\nfive times. They may\\nalso burn the target.",
+},
+
 };

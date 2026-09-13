@@ -1381,10 +1381,10 @@ const TrainerData sTrainerData[] = {
                 .ballSeal = 0,
             },
             {
-                .ivs = 50,
+                .ivs = 150,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 12,
-                .species = SPECIES_CORVIKNIGHT,
+                .level = 13,
+                .species = SPECIES_NOIBAT,
                 .ballSeal = 0,
             },
             {
