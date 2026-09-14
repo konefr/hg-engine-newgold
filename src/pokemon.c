@@ -1818,10 +1818,24 @@ u32 LONG_CALL GetLevelCap(void)
 
     // Progression:
     // Start -> Elder Li -> Falkner -> Proton -> Bugsy -> Whitney
+    // -> Silver (Burned Tower) -> Morty
 
+
+    // Morty defeated: temporary removal of cap
+    // Fog Badge
+    if (PlayerProfile_TestBadgeFlag(profile, 3)) {
+        return 100;
+    }
+
+    // Silver defeated at Burned Tower:
+    // raise cap for Morty
+    if (CheckScriptFlag(454)) { // FLAG_HIDE_BURNED_TOWER_1F_RIVAL
+        return 36;
+    }
+    
     // Whitney defeated: temporary removal of level cap
     if (PlayerProfile_TestBadgeFlag(profile, 2)) { // Plain Badge
-        return 100;
+        return 34;
     }
 
     // Bugsy defeated: Whitney cap

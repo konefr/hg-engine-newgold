@@ -1564,7 +1564,7 @@ const TrainerData sTrainerData[] = {
             .abilitySlot = TRAINER_POKEMON_ABILITY_1,
             .level = 35,
             .species = SPECIES_ANNIHILAPE,
-            .heldItem = ITEM_LUM_BERRY,
+            .item = ITEM_LUM_BERRY,
             .moves = {MOVE_BULK_UP,
                 MOVE_RAGE_FIST,
                 MOVE_DRAIN_PUNCH,
