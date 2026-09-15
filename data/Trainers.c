@@ -2151,7 +2151,6 @@ const TrainerData sTrainerData[] = {
                 .moves = { MOVE_DOUBLE_TEAM, MOVE_QUICK_ATTACK, MOVE_THUNDER, MOVE_IRON_TAIL },
                 .ballSeal = 0,
             },
-            .party = {
             {
                 .ivs = 0,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
@@ -17099,7 +17098,7 @@ const TrainerData sTrainerData[] = {
             .trainerClass = TRAINERCLASS_PSYCHIC_M,
             .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
             .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS,
-            .battleType = DOUBLE_BATTLE_BATTLE,
+            .battleType = DOUBLE_BATTLE,
         },
         .party = {
             {
@@ -17523,8 +17522,7 @@ const TrainerData sTrainerData[] = {
                 .level = 37,
                 .species = SPECIES_MR_MIME,
                 .ballSeal = 0,
-            },
-            .party = {
+            },        
             {
                 .ivs = 100,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
@@ -17532,7 +17530,6 @@ const TrainerData sTrainerData[] = {
                 .species = SPECIES_WOBBUFFET,
                 .ballSeal = 0,
             },
-            .party = {
             {
                 .ivs = 100,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
@@ -31556,7 +31553,7 @@ const TrainerData sTrainerData[] = {
             {
                 .ivs = 0,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 16,
+                .level = 38,
                 .species = SPECIES_BELLOSSOM,
                 .ballSeal = 1,
             },
