@@ -66123,7 +66123,7 @@ const SpeciesDataEntry sSpeciesData[MAX_SPECIES_INCLUDING_FORMS + 1] = {
 
     [SPECIES_SLOWBRO_GALARIAN] = {
         .textData = {
-            .name = "-----",
+            .name = "SLOWBRO",
             .pokedexEntry = "",
             .classification = "Hermit Crab Pokémon",
             .height = "???’??”",
@@ -66180,7 +66180,7 @@ const SpeciesDataEntry sSpeciesData[MAX_SPECIES_INCLUDING_FORMS + 1] = {
 
     [SPECIES_FARFETCHD_GALARIAN] = {
         .textData = {
-            .name = "-----",
+            .name = "FARFETCHD",
             .pokedexEntry = "",
             .classification = "Wild Duck Pokémon",
             .height = "???’??”",
@@ -66522,7 +66522,7 @@ const SpeciesDataEntry sSpeciesData[MAX_SPECIES_INCLUDING_FORMS + 1] = {
 
     [SPECIES_SLOWKING_GALARIAN] = {
         .textData = {
-            .name = "-----",
+            .name = "SLOWKING",
             .pokedexEntry = "",
             .classification = "Hexpert Pokémon",
             .height = "???’??”",

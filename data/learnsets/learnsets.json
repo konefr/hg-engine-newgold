@@ -34376,8 +34376,12 @@
         "Move": "MOVE_MYSTICAL_FIRE"
       },
       {
-        "Level": 39,
+        "Level": 37,
         "Move": "MOVE_DAZZLING_GLEAM"
+      },
+      {
+        "Level": 40,
+        "Move": "MOVE_EARTH_POWER"
       },
       {
         "Level": 43,
