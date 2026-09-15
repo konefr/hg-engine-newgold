@@ -3827,7 +3827,7 @@ const EncounterData __data[] =
                 SPECIES_TRUBBISH,
                 SPECIES_GRANBULL,
                 SPECIES_BOUFFALANT,
-                SPECIES_FLETCHING,
+                SPECIES_FLETCHLING,
                 SPECIES_MILTANK,
                 SPECIES_TAUROS,
                 SPECIES_MILTANK,
