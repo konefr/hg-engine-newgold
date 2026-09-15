@@ -4897,20 +4897,21 @@ const HeadbuttArchiveData __data =
         .normalTreeCount = 35,
         .specialTreeCount = 0,
         .normalSlots =
-        {
-            { SPECIES_HOOTHOOT, 2, 3 },
-            { SPECIES_PINECO, 2, 3 },
-            { SPECIES_PINECO, 2, 3 },
-            { SPECIES_EXEGGCUTE, 2, 3 },
-            { SPECIES_EXEGGCUTE, 2, 3 },
-            { SPECIES_EXEGGCUTE, 2, 3 },
-            { SPECIES_HOOTHOOT, 4, 5 },
-            { SPECIES_SPINARAK, 4, 5 },
-            { SPECIES_SPINARAK, 4, 5 },
-            { SPECIES_EXEGGCUTE, 4, 5 },
-            { SPECIES_EXEGGCUTE, 4, 5 },
-            { SPECIES_EXEGGCUTE, 4, 5 },
-        },
+    {
+    { SPECIES_HOOTHOOT, 2, 3 },
+    { SPECIES_PINECO, 2, 3 },
+    { SPECIES_PINECO, 2, 3 },
+    { SPECIES_AIPOM, 2, 3 },
+    { SPECIES_EXEGGCUTE, 2, 3 },
+    { SPECIES_SHROOMISH, 2, 3 },
+
+    { SPECIES_PINECO, 4, 5 },
+    { SPECIES_AIPOM, 4, 5 },
+    { SPECIES_HERACROSS, 4, 5 },
+    { SPECIES_SPINARAK, 4, 5 },
+    { SPECIES_EXEGGCUTE, 4, 5 },
+    { SPECIES_SHROOMISH, 4, 5 },
+},
         .specialSlots =
         {
             { SPECIES_NONE, 0, 0 },
@@ -4964,20 +4965,21 @@ const HeadbuttArchiveData __data =
         .normalTreeCount = 30,
         .specialTreeCount = 0,
         .normalSlots =
-        {
-            { SPECIES_HOOTHOOT, 2, 3 },
-            { SPECIES_PINECO, 2, 3 },
-            { SPECIES_PINECO, 2, 3 },
-            { SPECIES_EXEGGCUTE, 2, 3 },
-            { SPECIES_EXEGGCUTE, 2, 3 },
-            { SPECIES_EXEGGCUTE, 2, 3 },
-            { SPECIES_HOOTHOOT, 4, 5 },
-            { SPECIES_SPINARAK, 4, 5 },
-            { SPECIES_SPINARAK, 4, 5 },
-            { SPECIES_EXEGGCUTE, 4, 5 },
-            { SPECIES_EXEGGCUTE, 4, 5 },
-            { SPECIES_EXEGGCUTE, 4, 5 },
-        },
+{
+    { SPECIES_HOOTHOOT, 2, 3 },
+    { SPECIES_PINECO, 2, 3 },
+    { SPECIES_PINECO, 2, 3 },
+    { SPECIES_AIPOM, 2, 3 },
+    { SPECIES_EXEGGCUTE, 2, 3 },
+    { SPECIES_SHROOMISH, 2, 3 },
+
+    { SPECIES_PINECO, 4, 5 },
+    { SPECIES_AIPOM, 4, 5 },
+    { SPECIES_HERACROSS, 4, 5 },
+    { SPECIES_SPINARAK, 4, 5 },
+    { SPECIES_EXEGGCUTE, 4, 5 },
+    { SPECIES_SHROOMISH, 4, 5 },
+},
         .specialSlots =
         {
             { SPECIES_NONE, 0, 0 },
@@ -5025,21 +5027,22 @@ const HeadbuttArchiveData __data =
     .route31 = {
         .normalTreeCount = 15,
         .specialTreeCount = 0,
-        .normalSlots =
-        {
-            { SPECIES_HOOTHOOT, 3, 4 },
-            { SPECIES_PINECO, 3, 4 },
-            { SPECIES_PINECO, 3, 4 },
-            { SPECIES_EXEGGCUTE, 3, 4 },
-            { SPECIES_EXEGGCUTE, 3, 4 },
-            { SPECIES_EXEGGCUTE, 3, 4 },
-            { SPECIES_HOOTHOOT, 5, 6 },
-            { SPECIES_SPINARAK, 5, 6 },
-            { SPECIES_SPINARAK, 5, 6 },
-            { SPECIES_EXEGGCUTE, 5, 6 },
-            { SPECIES_EXEGGCUTE, 5, 6 },
-            { SPECIES_EXEGGCUTE, 5, 6 },
-        },
+            .normalSlots =
+{
+    { SPECIES_HOOTHOOT, 3, 4 },
+    { SPECIES_PINECO, 3, 4 },
+    { SPECIES_PINECO, 3, 4 },
+    { SPECIES_AIPOM, 3, 4 },
+    { SPECIES_EXEGGCUTE, 3, 4 },
+    { SPECIES_BURMY, 3, 4 },
+
+    { SPECIES_PINECO, 5, 6 },
+    { SPECIES_AIPOM, 5, 6 },
+    { SPECIES_HERACROSS, 5, 6 },
+    { SPECIES_SPINARAK, 5, 6 },
+    { SPECIES_EXEGGCUTE, 5, 6 },
+    { SPECIES_BURMY, 5, 6 },
+},
         .specialSlots =
         {
             { SPECIES_NONE, 0, 0 },
@@ -5073,20 +5076,21 @@ const HeadbuttArchiveData __data =
         .normalTreeCount = 35,
         .specialTreeCount = 0,
         .normalSlots =
-        {
-            { SPECIES_HOOTHOOT, 4, 5 },
-            { SPECIES_PINECO, 4, 5 },
-            { SPECIES_PINECO, 4, 5 },
-            { SPECIES_EXEGGCUTE, 4, 5 },
-            { SPECIES_EXEGGCUTE, 4, 5 },
-            { SPECIES_EXEGGCUTE, 4, 5 },
-            { SPECIES_HOOTHOOT, 6, 7 },
-            { SPECIES_HOOTHOOT, 6, 7 },
-            { SPECIES_HOOTHOOT, 6, 7 },
-            { SPECIES_EXEGGCUTE, 6, 7 },
-            { SPECIES_EXEGGCUTE, 6, 7 },
-            { SPECIES_EXEGGCUTE, 6, 7 },
-        },
+{
+    { SPECIES_HOOTHOOT, 4, 5 },
+    { SPECIES_PINECO, 4, 5 },
+    { SPECIES_PINECO, 4, 5 },
+    { SPECIES_AIPOM, 4, 5 },
+    { SPECIES_EXEGGCUTE, 4, 5 },
+    { SPECIES_VOLBEAT, 4, 5 },
+
+    { SPECIES_PINECO, 6, 7 },
+    { SPECIES_AIPOM, 6, 7 },
+    { SPECIES_HERACROSS, 6, 7 },
+    { SPECIES_SPEAROW, 6, 7 },
+    { SPECIES_EXEGGCUTE, 6, 7 },
+    { SPECIES_ILLUMISE, 6, 7 },
+},
         .specialSlots =
         {
             { SPECIES_NONE, 0, 0 },
@@ -5140,20 +5144,21 @@ const HeadbuttArchiveData __data =
         .normalTreeCount = 4,
         .specialTreeCount = 0,
         .normalSlots =
-        {
-            { SPECIES_SPEAROW, 3, 5 },
-            { SPECIES_HERACROSS, 3, 5 },
-            { SPECIES_HERACROSS, 3, 5 },
-            { SPECIES_AIPOM, 3, 5 },
-            { SPECIES_AIPOM, 3, 5 },
-            { SPECIES_AIPOM, 3, 5 },
-            { SPECIES_SPEAROW, 6, 8 },
-            { SPECIES_SPEAROW, 6, 8 },
-            { SPECIES_SPEAROW, 6, 8 },
-            { SPECIES_AIPOM, 6, 8 },
-            { SPECIES_AIPOM, 6, 8 },
-            { SPECIES_AIPOM, 6, 8 },
-        },
+{
+    { SPECIES_SPEAROW, 3, 5 },
+    { SPECIES_HERACROSS, 3, 5 },
+    { SPECIES_HERACROSS, 3, 5 },
+    { SPECIES_AIPOM, 3, 5 },
+    { SPECIES_AIPOM, 3, 5 },
+    { SPECIES_VOLBEAT, 3, 5 },
+
+    { SPECIES_SPEAROW, 6, 8 },
+    { SPECIES_HERACROSS, 6, 8 },
+    { SPECIES_AIPOM, 6, 8 },
+    { SPECIES_AIPOM, 6, 8 },
+    { SPECIES_EXEGGCUTE, 6, 8 },
+    { SPECIES_ILLUMISE, 6, 8 },
+},
         .specialSlots =
         {
             { SPECIES_NONE, 0, 0 },
@@ -5176,20 +5181,21 @@ const HeadbuttArchiveData __data =
         .normalTreeCount = 15,
         .specialTreeCount = 0,
         .normalSlots =
-        {
-            { SPECIES_HOOTHOOT, 9, 10 },
-            { SPECIES_PINECO, 9, 10 },
-            { SPECIES_PINECO, 9, 10 },
-            { SPECIES_EXEGGCUTE, 9, 10 },
-            { SPECIES_EXEGGCUTE, 9, 10 },
-            { SPECIES_EXEGGCUTE, 9, 10 },
-            { SPECIES_HOOTHOOT, 11, 12 },
-            { SPECIES_SPINARAK, 11, 12 },
-            { SPECIES_SPINARAK, 11, 12 },
-            { SPECIES_EXEGGCUTE, 11, 12 },
-            { SPECIES_EXEGGCUTE, 11, 12 },
-            { SPECIES_EXEGGCUTE, 11, 12 },
-        },
+{
+    { SPECIES_HOOTHOOT, 9, 10 },
+    { SPECIES_PINECO, 9, 10 },
+    { SPECIES_PINECO, 9, 10 },
+    { SPECIES_AIPOM, 9, 10 },
+    { SPECIES_EXEGGCUTE, 9, 10 },
+    { SPECIES_VOLBEAT, 9, 10 },
+
+    { SPECIES_PINECO, 11, 12 },
+    { SPECIES_AIPOM, 11, 12 },
+    { SPECIES_HERACROSS, 11, 12 },
+    { SPECIES_SPINARAK, 11, 12 },
+    { SPECIES_EXEGGCUTE, 11, 12 },
+    { SPECIES_ILLUMISE, 11, 12 },
+},
         .specialSlots =
         {
             { SPECIES_NONE, 0, 0 },
@@ -5223,20 +5229,21 @@ const HeadbuttArchiveData __data =
         .normalTreeCount = 14,
         .specialTreeCount = 0,
         .normalSlots =
-        {
-            { SPECIES_HOOTHOOT, 10, 11 },
-            { SPECIES_PINECO, 10, 11 },
-            { SPECIES_PINECO, 10, 11 },
-            { SPECIES_EXEGGCUTE, 10, 11 },
-            { SPECIES_EXEGGCUTE, 10, 11 },
-            { SPECIES_EXEGGCUTE, 10, 11 },
-            { SPECIES_HOOTHOOT, 13, 14 },
-            { SPECIES_SPINARAK, 13, 14 },
-            { SPECIES_SPINARAK, 13, 14 },
-            { SPECIES_EXEGGCUTE, 13, 14 },
-            { SPECIES_EXEGGCUTE, 13, 14 },
-            { SPECIES_EXEGGCUTE, 13, 14 },
-        },
+{
+    { SPECIES_HOOTHOOT, 10, 11 },
+    { SPECIES_PINECO, 10, 11 },
+    { SPECIES_PINECO, 10, 11 },
+    { SPECIES_AIPOM, 10, 11 },
+    { SPECIES_EXEGGCUTE, 10, 11 },
+    { SPECIES_COMBEE, 10, 11 },
+
+    { SPECIES_PINECO, 13, 14 },
+    { SPECIES_AIPOM, 13, 14 },
+    { SPECIES_HERACROSS, 13, 14 },
+    { SPECIES_SPINARAK, 13, 14 },
+    { SPECIES_EXEGGCUTE, 13, 14 },
+    { SPECIES_COMBEE, 13, 14 },
+},
         .specialSlots =
         {
             { SPECIES_NONE, 0, 0 },
@@ -5269,20 +5276,21 @@ const HeadbuttArchiveData __data =
         .normalTreeCount = 26,
         .specialTreeCount = 0,
         .normalSlots =
-        {
-            { SPECIES_HOOTHOOT, 4, 5 },
-            { SPECIES_PINECO, 4, 5 },
-            { SPECIES_PINECO, 4, 5 },
-            { SPECIES_EXEGGCUTE, 4, 5 },
-            { SPECIES_EXEGGCUTE, 4, 5 },
-            { SPECIES_EXEGGCUTE, 4, 5 },
-            { SPECIES_HOOTHOOT, 6, 7 },
-            { SPECIES_SPINARAK, 6, 7 },
-            { SPECIES_SPINARAK, 6, 7 },
-            { SPECIES_EXEGGCUTE, 6, 7 },
-            { SPECIES_EXEGGCUTE, 6, 7 },
-            { SPECIES_EXEGGCUTE, 6, 7 },
-        },
+{
+    { SPECIES_HOOTHOOT, 4, 5 },
+    { SPECIES_PINECO, 4, 5 },
+    { SPECIES_PINECO, 4, 5 },
+    { SPECIES_AIPOM, 4, 5 },
+    { SPECIES_EXEGGCUTE, 4, 5 },
+    { SPECIES_COMBEE, 4, 5 },
+
+    { SPECIES_PINECO, 6, 7 },
+    { SPECIES_AIPOM, 6, 7 },
+    { SPECIES_HERACROSS, 6, 7 },
+    { SPECIES_SPINARAK, 6, 7 },
+    { SPECIES_EXEGGCUTE, 6, 7 },
+    { SPECIES_COMBEE, 6, 7 },
+},
         .specialSlots =
         {
             { SPECIES_NONE, 0, 0 },
@@ -5326,21 +5334,22 @@ const HeadbuttArchiveData __data =
     .route37 = {
         .normalTreeCount = 13,
         .specialTreeCount = 0,
-        .normalSlots =
-        {
-            { SPECIES_HOOTHOOT, 12, 14 },
-            { SPECIES_PINECO, 12, 14 },
-            { SPECIES_PINECO, 12, 14 },
-            { SPECIES_EXEGGCUTE, 12, 14 },
-            { SPECIES_EXEGGCUTE, 12, 14 },
-            { SPECIES_EXEGGCUTE, 12, 14 },
-            { SPECIES_HOOTHOOT, 15, 17 },
-            { SPECIES_SPINARAK, 15, 17 },
-            { SPECIES_SPINARAK, 15, 17 },
-            { SPECIES_EXEGGCUTE, 15, 17 },
-            { SPECIES_EXEGGCUTE, 15, 17 },
-            { SPECIES_EXEGGCUTE, 15, 17 },
-        },
+       .normalSlots =
+{
+    { SPECIES_HOOTHOOT, 12, 14 },
+    { SPECIES_PINECO, 12, 14 },
+    { SPECIES_PINECO, 12, 14 },
+    { SPECIES_AIPOM, 12, 14 },
+    { SPECIES_EXEGGCUTE, 12, 14 },
+    { SPECIES_SEWADDLE, 12, 14 },
+
+    { SPECIES_PINECO, 15, 17 },
+    { SPECIES_AIPOM, 15, 17 },
+    { SPECIES_HERACROSS, 15, 17 },
+    { SPECIES_SPINARAK, 15, 17 },
+    { SPECIES_EXEGGCUTE, 15, 17 },
+    { SPECIES_SEWADDLE, 15, 17 },
+},
         .specialSlots =
         {
             { SPECIES_NONE, 0, 0 },
@@ -5372,28 +5381,29 @@ const HeadbuttArchiveData __data =
         .normalTreeCount = 13,
         .specialTreeCount = 1,
         .normalSlots =
-        {
-            { SPECIES_HOOTHOOT, 13, 14 },
-            { SPECIES_PINECO, 13, 14 },
-            { SPECIES_PINECO, 13, 14 },
-            { SPECIES_EXEGGCUTE, 13, 14 },
-            { SPECIES_EXEGGCUTE, 13, 14 },
-            { SPECIES_EXEGGCUTE, 13, 14 },
-            { SPECIES_HOOTHOOT, 15, 16 },
-            { SPECIES_SPINARAK, 15, 16 },
-            { SPECIES_SPINARAK, 15, 16 },
-            { SPECIES_EXEGGCUTE, 15, 16 },
-            { SPECIES_EXEGGCUTE, 15, 16 },
-            { SPECIES_EXEGGCUTE, 15, 16 },
-        },
+{
+    { SPECIES_HOOTHOOT, 13, 14 },
+    { SPECIES_PINECO, 13, 14 },
+    { SPECIES_PINECO, 13, 14 },
+    { SPECIES_AIPOM, 13, 14 },
+    { SPECIES_EXEGGCUTE, 13, 14 },
+    { SPECIES_SEWADDLE, 13, 14 },
+
+    { SPECIES_PINECO, 15, 16 },
+    { SPECIES_AIPOM, 15, 16 },
+    { SPECIES_HERACROSS, 15, 16 },
+    { SPECIES_SPINARAK, 15, 16 },
+    { SPECIES_EXEGGCUTE, 15, 16 },
+    { SPECIES_SEWADDLE, 15, 16 },
+},
         .specialSlots =
         {
-            { SPECIES_EXEGGCUTE, 18, 25 },
-            { SPECIES_EXEGGCUTE, 18, 25 },
-            { SPECIES_BURMY, 18, 20 },
-            { SPECIES_BURMY, 18, 20 },
-            { SPECIES_BURMY, 18, 20 },
-            { SPECIES_BURMY, 21, 25 },
+            { SPECIES_FORRETRESS, 18, 25 },
+            { SPECIES_FORRETRESS, 18, 25 },
+            { SPECIES_FORRETRESS, 18, 20 },
+            { SPECIES_APPLIN, 18, 20 },
+            { SPECIES_APPLIN, 18, 20 },
+            { SPECIES_APPLIN, 21, 25 },
         },
         .treeCoords =
         {
@@ -5418,20 +5428,21 @@ const HeadbuttArchiveData __data =
         .normalTreeCount = 3,
         .specialTreeCount = 0,
         .normalSlots =
-        {
-            { SPECIES_HOOTHOOT, 14, 15 },
-            { SPECIES_PINECO, 14, 15 },
-            { SPECIES_PINECO, 14, 15 },
-            { SPECIES_EXEGGCUTE, 14, 15 },
-            { SPECIES_EXEGGCUTE, 14, 15 },
-            { SPECIES_EXEGGCUTE, 14, 15 },
-            { SPECIES_HOOTHOOT, 16, 17 },
-            { SPECIES_SPINARAK, 16, 17 },
-            { SPECIES_SPINARAK, 16, 17 },
-            { SPECIES_EXEGGCUTE, 16, 17 },
-            { SPECIES_EXEGGCUTE, 16, 17 },
-            { SPECIES_EXEGGCUTE, 16, 17 },
-        },
+{
+    { SPECIES_HOOTHOOT, 13, 14 },
+    { SPECIES_PINECO, 13, 14 },
+    { SPECIES_FERROSEED, 13, 14 },
+    { SPECIES_AIPOM, 13, 14 },
+    { SPECIES_FERROSEED, 13, 14 },
+    { SPECIES_FERROSEED, 13, 14 },
+
+    { SPECIES_PINECO, 15, 16 },
+    { SPECIES_AIPOM, 15, 16 },
+    { SPECIES_HERACROSS, 15, 16 },
+    { SPECIES_SPINARAK, 15, 16 },
+    { SPECIES_FERROSEED, 15, 16 },
+    { SPECIES_FERROSEED, 15, 16 },
+},
         .specialSlots =
         {
             { SPECIES_NONE, 0, 0 },
