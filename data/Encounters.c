@@ -2117,7 +2117,7 @@ const EncounterData __data[] =
     .rateSuperRod = 75,
     .landSlots = {
         .levels = {
-            10, 11, 10, 11, 12, 12, 10, 10, 13, 10, 13, 10
+            15, 16, 16, 16, 16, 16, 16, 16, 17, 17, 17, 18
         },
         .speciesMorning = {
             SPECIES_SNUBBULL,
@@ -2128,7 +2128,7 @@ const EncounterData __data[] =
             SPECIES_SNUBBULL,
             SPECIES_DROWZEE,
             SPECIES_DITTO,
-            SPECIES_SNUBBULL,
+            SPECIES_HOUNDOUR,
             SPECIES_ABRA,
             SPECIES_GLAMEOW,
             SPECIES_PURRLOIN,
@@ -2141,7 +2141,7 @@ const EncounterData __data[] =
             SPECIES_ABRA,
             SPECIES_ABRA,
             SPECIES_DROWZEE,
-            SPECIES_GROWLITHE,
+            SPECIES_HOUNDOUR,
             SPECIES_MEOWTH,
             SPECIES_DITTO,
             SPECIES_LILLIPUP,
@@ -2152,11 +2152,11 @@ const EncounterData __data[] =
             SPECIES_MEOWTH,
             SPECIES_DROWZEE,
             SPECIES_HOUNDOUR,
-            SPECIES_ABRA,
-            SPECIES_ABRA,
-            SPECIES_ABRA,
             SPECIES_HOUNDOUR,
+            SPECIES_ABRA,
+            SPECIES_MURKROW,
             SPECIES_HOUNDOUR,
+            SPECIES_DITTO,
             SPECIES_MURKROW,
             SPECIES_POOCHYENA,
             SPECIES_MURKROW,

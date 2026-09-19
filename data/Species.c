@@ -9587,10 +9587,10 @@ const SpeciesDataEntry sSpeciesData[MAX_SPECIES_INCLUDING_FORMS + 1] = {
         },
         .speciesData = {
             .baseStats = {
-                .hp = 85,
+                .hp = 80,
                 .attack = 130,
-                .defense = 85,
-                .spAttack = 75,
+                .defense = 80,
+                .spAttack = 70,
                 .spDefense = 100,
                 .speed = 40,
             },
@@ -10499,8 +10499,8 @@ const SpeciesDataEntry sSpeciesData[MAX_SPECIES_INCLUDING_FORMS + 1] = {
         },
         .speciesData = {
             .baseStats = {
-                .hp = 105,
-                .attack = 60,
+                .hp = 110,
+                .attack = 50,
                 .defense = 90,
                 .spAttack = 50,
                 .spDefense = 90,
@@ -11126,12 +11126,12 @@ const SpeciesDataEntry sSpeciesData[MAX_SPECIES_INCLUDING_FORMS + 1] = {
         },
         .speciesData = {
             .baseStats = {
-                .hp = 95,
+                .hp = 100,
                 .attack = 85,
                 .defense = 85,
-                .spAttack = 65,
-                .spDefense = 65,
-                .speed = 35,
+                .spAttack = 75,
+                .spDefense = 75,
+                .speed = 45,
             },
             .types = { TYPE_WATER, TYPE_GROUND },
             .catchRate = 90,
@@ -13235,12 +13235,12 @@ const SpeciesDataEntry sSpeciesData[MAX_SPECIES_INCLUDING_FORMS + 1] = {
         },
         .speciesData = {
             .baseStats = {
-                .hp = 100,
+                .hp = 90,
                 .attack = 120,
                 .defense = 120,
                 .spAttack = 50,
                 .spDefense = 70,
-                .speed = 65,
+                .speed = 85,
             },
             .types = { TYPE_GROUND, TYPE_GROUND },
             .catchRate = 60,
@@ -13349,12 +13349,12 @@ const SpeciesDataEntry sSpeciesData[MAX_SPECIES_INCLUDING_FORMS + 1] = {
         },
         .speciesData = {
             .baseStats = {
-                .hp = 73,
+                .hp = 93,
                 .attack = 95,
                 .defense = 62,
                 .spAttack = 85,
                 .spDefense = 65,
-                .speed = 85,
+                .speed = 105,
             },
             .types = { TYPE_NORMAL, TYPE_NORMAL },
             .catchRate = 45,
