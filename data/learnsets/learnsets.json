@@ -41839,7 +41839,11 @@
         "Move": "MOVE_ROLE_PLAY"
       },
       {
-        "Level": 37,
+        "Level": 36,
+        "Move": "MOVE_PSYSHIELD_BASH"
+      },
+      {
+        "Level": 40,
         "Move": "MOVE_ZEN_HEADBUTT"
       },
       {

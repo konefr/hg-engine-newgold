@@ -1485,7 +1485,7 @@ const TrainerData sTrainerData[] = {
     {
         .ivs = 180,
         .abilitySlot = TRAINER_POKEMON_ABILITY_HIDDEN,
-        .level = 29,
+        .level = 30,
         .species = SPECIES_FARIGIRAF,
         .item = ITEM_TWISTED_SPOON,
         .moves = {
