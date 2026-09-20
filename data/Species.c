@@ -10556,11 +10556,11 @@ const SpeciesDataEntry sSpeciesData[MAX_SPECIES_INCLUDING_FORMS + 1] = {
         },
         .speciesData = {
             .baseStats = {
-                .hp = 70,
+                .hp = 80,
                 .attack = 100,
-                .defense = 115,
+                .defense = 120,
                 .spAttack = 30,
-                .spDefense = 65,
+                .spDefense = 80,
                 .speed = 30,
             },
             .types = { TYPE_ROCK, TYPE_BUG },

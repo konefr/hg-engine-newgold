@@ -33115,6 +33115,14 @@
         "Move": "MOVE_ROCK_THROW"
       },
       {
+        "Level": 1,
+        "Move": "MOVE_BUG_BITE"
+      },
+      {
+        "Level": 1,
+        "Move": "MOVE_X_SCISSOR"
+      },
+      {
         "Level": 12,
         "Move": "MOVE_BLOCK"
       },
@@ -33135,7 +33143,11 @@
         "Move": "MOVE_SUCKER_PUNCH"
       },
       {
-        "Level": 32,
+        "Level": 30,
+        "Move": "MOVE_RAGE_POWDER"
+      },
+      {
+        "Level": 33,
         "Move": "MOVE_ROCK_SLIDE"
       },
       {
