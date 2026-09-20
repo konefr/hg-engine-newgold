@@ -4704,8 +4704,8 @@ const SpeciesDataEntry sSpeciesData[MAX_SPECIES_INCLUDING_FORMS + 1] = {
                 .speed = 0,
             },
             .wildHeldItems = {
-                .common = ITEM_MAGNET,
-                .rare = ITEM_METAL_COAT,
+                .common = ITEM_METAL_COAT,
+                .rare = ITEM_MAGNET,
             },
             .genderRatio = 255,
             .hatchCycles = 20,

@@ -2026,7 +2026,7 @@ const EncounterData __data[] =
             SPECIES_ZUBAT,
             SPECIES_CATERPIE,
             SPECIES_WEEDLE,
-            SPECIES_WEEDLE,
+            SPECIES_APPLIN,
             SPECIES_GLOOM,
             SPECIES_APPLIN,
             SPECIES_BUDEW,
@@ -3820,8 +3820,8 @@ const EncounterData __data[] =
                 29, 29, 28, 28, 27, 28, 29, 28, 27, 26, 27, 28
             },
             .speciesMorning = {
-                SPECIES_TRUBBISH,
                 SPECIES_MAGNEMITE,
+                SPECIES_MAGNETON,
                 SPECIES_MEOWTH,
                 SPECIES_MAGNEMITE,
                 SPECIES_TRUBBISH,
@@ -3834,10 +3834,10 @@ const EncounterData __data[] =
                 SPECIES_TRUBBISH,
             },
             .speciesDay = {
-                SPECIES_FEAROW,
+                SPECIES_MAGNETON,
                 SPECIES_MAGNEMITE,
                 SPECIES_MEOWTH,
-                SPECIES_MAGNEMITE,
+                SPECIES_FEAROW,
                 SPECIES_TRUBBISH,
                 SPECIES_GRANBULL,
                 SPECIES_BOUFFALANT,
@@ -3848,7 +3848,7 @@ const EncounterData __data[] =
                 SPECIES_TRUBBISH,
             },
             .speciesNight = {
-                SPECIES_MAGNEMITE,
+                SPECIES_NOCTOWL,
                 SPECIES_MAGNEMITE,
                 SPECIES_NOCTOWL,
                 SPECIES_PIDGEOTTO,
