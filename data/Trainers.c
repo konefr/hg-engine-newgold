@@ -9744,7 +9744,7 @@ const TrainerData sTrainerData[] = {
     [216] = {
         .name = "Grunt",
         .data = {
-            .trainerType = TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ITEMS,
+            .trainerType = TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_SHINY_LOCK,
             .trainerClass = TRAINERCLASS_TEAM_ROCKET,
             .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
             .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE,
@@ -9758,15 +9758,17 @@ const TrainerData sTrainerData[] = {
                 .species = SPECIES_RATICATE,
                 .item = ITEM_ORAN_BERRY,
                 .moves = { MOVE_HYPER_FANG, MOVE_CRUNCH, MOVE_SUCKER_PUNCH, MOVE_SUPER_FANG },
+                .shinyLock = 0,
                 .ballSeal = 0,
             },
             {
                 .ivs = 30,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_2,
                 .level = 48,
-                .species = SPECIES_LINOONE,
+                .species = SPECIES_OBSTAGOON,
                 .item = ITEM_ORAN_BERRY,
-                .moves = { MOVE_EXTREME_SPEED, MOVE_SHADOW_CLAW, MOVE_SEED_BOMB, MOVE_BELLY_DRUM },
+                .moves = { MOVE_FACADE, MOVE_NIGHT_SLASH, MOVE_SEED_BOMB, MOVE_OBSTRUCT },
+                .shinyLock = 1,
                 .ballSeal = 0,
             },
             {
@@ -9776,6 +9778,7 @@ const TrainerData sTrainerData[] = {
                 .species = SPECIES_LIEPARD,
                 .item = ITEM_ORAN_BERRY,
                 .moves = { MOVE_NIGHT_SLASH, MOVE_FAKE_OUT, MOVE_AERIAL_ACE, MOVE_HONE_CLAWS },
+                .shinyLock = 0,
                 .ballSeal = 0,
             },
             {
@@ -9785,6 +9788,7 @@ const TrainerData sTrainerData[] = {
                 .species = SPECIES_OBSTAGOON,
                 .item = ITEM_SITRUS_BERRY,
                 .moves = { MOVE_FACADE, MOVE_NIGHT_SLASH, MOVE_CROSS_CHOP, MOVE_BULK_UP },
+                .shinyLock = 0,
                 .ballSeal = 0,
             },
         },
@@ -9954,7 +9958,7 @@ const TrainerData sTrainerData[] = {
     [220] = {
         .name = "Grunt",
         .data = {
-            .trainerType = TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ITEMS,
+            .trainerType = TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_SHINY_LOCK,
             .trainerClass = TRAINERCLASS_TEAM_ROCKET,
             .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
             .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE,
@@ -9968,6 +9972,7 @@ const TrainerData sTrainerData[] = {
                 .species = SPECIES_VENOMOTH,
                 .item = ITEM_ORAN_BERRY,
                 .moves = { MOVE_BUG_BUZZ, MOVE_PSYCHIC, MOVE_SLUDGE_BOMB, MOVE_SLEEP_POWDER },
+                .shinyLock = 1,
                 .ballSeal = 0,
             },
             {
@@ -9977,6 +9982,7 @@ const TrainerData sTrainerData[] = {
                 .species = SPECIES_DUSTOX,
                 .item = ITEM_ORAN_BERRY,
                 .moves = { MOVE_BUG_BUZZ, MOVE_SLUDGE_BOMB, MOVE_PSYCHIC, MOVE_LIGHT_SCREEN },
+                .shinyLock = 0,
                 .ballSeal = 0,
             },
             {
@@ -9986,6 +9992,7 @@ const TrainerData sTrainerData[] = {
                 .species = SPECIES_GRAFAIAI,
                 .item = ITEM_SITRUS_BERRY,
                 .moves = { MOVE_POISON_JAB, MOVE_KNOCK_OFF, MOVE_U_TURN, MOVE_SWORDS_DANCE },
+                .shinyLock = 0,
                 .ballSeal = 0,
             },
         },
@@ -21825,7 +21832,7 @@ const TrainerData sTrainerData[] = {
     [488] = {
         .name = "Petrel",
         .data = {
-            .trainerType = TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ITEMS,
+            .trainerType = TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_SHINY_LOCK,
             .trainerClass = TRAINERCLASS_EXECUTIVE_PETREL,
             .items = { ITEM_HYPER_POTION, ITEM_NONE, ITEM_NONE, ITEM_NONE },
             .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS,
@@ -21839,6 +21846,7 @@ const TrainerData sTrainerData[] = {
                 .species = SPECIES_CROBAT,
                 .item = ITEM_ORAN_BERRY,
                 .moves = { MOVE_FLY, MOVE_CROSS_POISON, MOVE_BITE, MOVE_CONFUSE_RAY },
+                .shinyLock = 1,
                 .ballSeal = 0,
             },
             {
@@ -21848,6 +21856,7 @@ const TrainerData sTrainerData[] = {
                 .species = SPECIES_RATICATE,
                 .item = ITEM_ORAN_BERRY,
                 .moves = { MOVE_HYPER_FANG, MOVE_CRUNCH, MOVE_SUCKER_PUNCH, MOVE_SUPER_FANG },
+                .shinyLock = 0,
                 .ballSeal = 0,
             },
             {
@@ -21857,6 +21866,7 @@ const TrainerData sTrainerData[] = {
                 .species = SPECIES_WEEZING,
                 .item = ITEM_SITRUS_BERRY,
                 .moves = { MOVE_SLUDGE_BOMB, MOVE_FLAMETHROWER, MOVE_SHADOW_BALL, MOVE_WILL_O_WISP },
+                .shinyLock = 0,
                 .ballSeal = 0,
             },
             {
@@ -21866,6 +21876,7 @@ const TrainerData sTrainerData[] = {
                 .species = SPECIES_SKUNTANK,
                 .item = ITEM_ORAN_BERRY,
                 .moves = { MOVE_POISON_JAB, MOVE_NIGHT_SLASH, MOVE_FLAMETHROWER, MOVE_TOXIC_SPIKES },
+                .shinyLock = 0,
                 .ballSeal = 0,
             },
             {
@@ -21875,6 +21886,7 @@ const TrainerData sTrainerData[] = {
                 .species = SPECIES_TOXICROAK,
                 .item = ITEM_ORAN_BERRY,
                 .moves = { MOVE_POISON_JAB, MOVE_DRAIN_PUNCH, MOVE_SUCKER_PUNCH, MOVE_SWORDS_DANCE },
+                .shinyLock = 0,
                 .ballSeal = 0,
             },
         },
